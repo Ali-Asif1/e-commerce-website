@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import right from "../../public/images/testright.svg";
-import star from "../../public/images/teststar.svg";
+import right from "../../public/images/testright.png";
+import star from "../../public/images/teststar.png";
 
 export const Testomonial = () => {
   return (

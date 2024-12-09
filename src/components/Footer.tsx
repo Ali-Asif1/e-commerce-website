@@ -1,8 +1,9 @@
 import React from "react";
 import Image from "next/image";
-import paypal from '../../public/images/paypal.svg'
-import card from '../../public/images/card.svg'
-import apple from '../../public/images/apple.svg'
+import paypal from '../../public/images/paypal.png'
+import card from '../../public/images/card.png'
+import apple from '../../public/images/apple.png'
+import visa from '../../public/images/visa.png'
 
 export const Footer = () => {
   return (
@@ -178,7 +179,7 @@ export const Footer = () => {
                         title=""
                         className="flex items-center justify-center"
                     >
-                        
+                        <Image src={visa} alt="visa"/>
                     </a>
                 </li>
 
