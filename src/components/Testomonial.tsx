@@ -7,7 +7,9 @@ export const Testomonial = () => {
   return (
     <div className="text-gray-600 body-font">
       <div className="container pt-12 mx-auto">
-        <h1 className="font-bold text-3xl text-black ml-6">OUR HAPPY COUSTOMER</h1>
+        <h1 className="font-bold text-3xl text-black ml-6">
+          OUR HAPPY COUSTOMER
+        </h1>
 
         <div className="flex flex-wrap mx-4">
           <div className="lg:w-1/3 lg:mb-0 mb-6 p-4">
@@ -18,9 +20,9 @@ export const Testomonial = () => {
             </h2>
             <div className="h-full text-center">
               <p className="leading-relaxed text-justify">
-                "I'm blown away by the quality and style of the clothes I
+                I am blown away by the quality and style of the clothes I
                 received from Shop.co. From casual wear to elegant dresses,
-                every piece I've bought has exceeded my expectations.”
+                every piece I have bought has exceeded my expectations.
               </p>
             </div>
           </div>
@@ -33,10 +35,10 @@ export const Testomonial = () => {
             </h2>
             <div className="h-full text-center">
               <p className="leading-relaxed text-justify">
-                "Finding clothes that align with my personal style used to be a
+                Finding clothes that align with my personal style used to be a
                 challenge until I discovered Shop.co. The range of options they
                 offer is truly remarkable, catering to a variety of tastes and
-                occasions.”
+                occasions.
               </p>
             </div>
           </div>
@@ -49,10 +51,10 @@ export const Testomonial = () => {
             </h2>
             <div className="h-full text-center">
               <p className="leading-relaxed text-justify">
-                "As someone who's always on the lookout for unique fashion
-                pieces, I'm thrilled to have stumbled upon Shop.co. The
+                As someone who is always on the lookout for unique fashion
+                pieces, I am thrilled to have stumbled upon Shop.co. The
                 selection of clothes is not only diverse but also on-point with
-                the latest trends.”
+                the latest trends.
               </p>
             </div>
           </div>

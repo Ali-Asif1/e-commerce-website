@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import hero from '../../public/images/heroimg2.png'
 
 export const Hero = () => {
   return (
@@ -15,7 +17,7 @@ export const Hero = () => {
       </div>
     </div>
     <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 ">
-      <img className="object-cover object-center rounded" alt="hero" src="/images/heroimg2.png"/>
+       <div className="object-cover object-center rounded"><Image src={hero} alt='hero' /></div>
     </div>
   </div>
 </section>

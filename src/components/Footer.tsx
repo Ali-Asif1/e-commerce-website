@@ -4,6 +4,7 @@ import paypal from '../../public/images/paypal.png'
 import card from '../../public/images/card.png'
 import apple from '../../public/images/apple.png'
 import visa from '../../public/images/visa.png'
+import logo from '../../public/images/logo.png'
 
 export const Footer = () => {
   return (
@@ -12,7 +13,7 @@ export const Footer = () => {
     <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
         <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
             <div className="col-span-2 md:col-span-4 xl:pr-8">
-                <img className="w-auto h-9" src="/images/logo.png" alt="logo" />
+                <Image className="w-auto h-9" src={logo} alt="logo" />
 
                 <p className="text-base leading-relaxed text-gray-600 mt-7 mb-6">We have clothes that suits your style and which you’re proud to wear. From women to men.</p>
 
