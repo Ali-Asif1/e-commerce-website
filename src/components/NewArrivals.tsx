@@ -6,7 +6,7 @@ import jeans from '../../public/images/jeans.png'
 import tshirt2 from '../../public/images/tshirt2.png'
 import stars from '../../public/images/stars.svg'
 import dis1 from '../../public/images/discount1.svg'
-import dis2 from '../../public/images/discount2.svg'
+import dis2 from '../../public/images/discnt2.png'
 
 
 export const NewArrivals = () => {
