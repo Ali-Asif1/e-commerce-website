@@ -5,8 +5,8 @@ import herostar from "../../public/images/herostar.png";
 
 export const Hero = () => {
   return (
-    <div className=" bg-gray-200">
-      <div className="px-4 sm:px-8 lg:px-16">
+    <section className="hero-section bg-gray-200">
+      <div className="px-4 sm:px-8 lg:px-16 pt-3">
         <div className="sm:flex">
           <div className="space-y-3 sm:w-1/2 sm:pt-20 md:pb-4">
             <h1 className="[font-size:clamp(2.25rem,4vw+1rem,5rem)] font-[900] leading-none">
@@ -57,6 +57,6 @@ export const Hero = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
