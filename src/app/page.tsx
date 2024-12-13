@@ -12,7 +12,7 @@ import { Update } from "@/components/Update";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full max-w-[1440px]">
       <Header1 />
       <Header2 />
       <Hero />

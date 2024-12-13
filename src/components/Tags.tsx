@@ -9,12 +9,12 @@ import calvin from '../../public/images/calvin.svg'
 export const Tags = () => {
   return (
     <div>
-        <div className='w-full h-[100px] bg-black flex justify-around gap-2 flex-wrap'>
-            <Image src={versace} alt='versace'/>
-            <div className='flex items-center'><Image src={zara} alt='versace' width={150} height={1} className='h-8 flex'/></div>
-            <Image src={gucci} alt='versace'/>
-            <div className='flex items-center'><Image src={prada} alt='versace' width={150} height={1} className='h-8 flex'/></div>
-            <Image src={calvin} alt='versace'/>
+        <div className='px-4 sm:px-8 lg:px-16 h-[146px] lg:h-[122px] bg-black flex justify-around flex-wrap gap-2 sm:gap-4'>
+            <Image src={versace} alt='versace' className='max-w-[116px] sm:max-w-[116px]'/>
+            <div className='flex items-center'><Image src={zara} alt='versace' className='max-w-16 sm:max-w-[91px]'/></div>
+            <Image src={gucci} alt='versace' className='max-w-[109px] sm:max-w-[156px]'/>
+            <div className='flex items-center'><Image src={prada} alt='versace' className='max-w-[127px] sm:max-w-[194px]'/></div>
+            <Image src={calvin} alt='versace' className='max-w-[134px] sm:max-w-[206px]'/>
         </div>
     </div>
   )
