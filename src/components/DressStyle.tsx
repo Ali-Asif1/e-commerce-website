@@ -8,7 +8,7 @@ import dress4 from '../../public/images/dress4.png'
 export const DressStyle = () => {
   return (
     <section className='dress-style'>
-      <div className='px-4 sm:px-8 lg:px-16 bg-red-300 pt-16'>
+      <div className='px-4 sm:px-8 lg:px-16 pt-16'>
        <div className='bg-gray-200 rounded-3xl px-6 py-8 '>
          <h1 className='text-center mb-10 md:mb-16 font-[900] text-2xl sm:text-3xl md:text-4xl'>BROWSE BY DRESS STYLE</h1>
          <div className='grid md:grid-cols-3 gap-5'>

@@ -13,7 +13,7 @@ export const TopSelling = () => {
   return (
     <>
       <section className="top-selling">
-        <div className="px-4 pt-12 sm:pt-16 sm:px-12 lg:px-16">
+        <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
           <h1 className="text-center mb-10 font-[900] text-[32px] sm:text-5xl ">
             Top Selling
           </h1>
