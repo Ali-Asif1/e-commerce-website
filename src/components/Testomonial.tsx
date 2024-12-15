@@ -16,7 +16,7 @@ export const Testomonial = () => {
         </div>
         <div className="">
           <div className="flex justify-around gap-12">
-            <div className="w-full sm:w-[336px] space-y-2">
+            <div className="w-full sm:w-[336px] space-y-2 border-2 border-gray-200 p-4">
               <Image src={star} alt="star" className="" />
               <h2 className="tracking-wider text-xl flex gap-2 font-bold">
                 Sara M.
@@ -31,7 +31,7 @@ export const Testomonial = () => {
               </div>
             </div>
 
-            <div className="w-[336px] hidden sm:block space-y-2">
+            <div className="w-[336px] hidden sm:block space-y-2 border-2 border-gray-200 p-4">
               <Image src={star} alt="star" className="mb-1" />
               <h2 className="tracking-wider text-xl flex gap-2 font-bold">
                 Alex K.
@@ -47,7 +47,7 @@ export const Testomonial = () => {
               </div>
             </div>
 
-            <div className="w-[336px] hidden lg:block space-y-2">
+            <div className="w-[336px] hidden lg:block space-y-2 border-2 border-gray-200 p-4">
               <Image src={star} alt="star" className="mb-1" />
               <h2 className="tracking-wider text-xl flex gap-2 font-bold">
                 James L.

@@ -18,20 +18,20 @@ export const TopSelling = () => {
             Top Selling
           </h1>
           <div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <div className="max-w-full bg-gray-200 rounded-xl flex">
+                <div className=" bg-gray-200 rounded-xl flex mb-4">
                   <Image
                     src={shirt}
                     alt="shirt"
                     className="object cover flex-1"
                   />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
                     Vertical Striped Shirt
                   </p>
-                  <div className="">
+                  <div className="space-y-1">
                     <Image src={star1} alt="stars" />
                     <div className="flex gap-2">
                       <p className="font-bold text-xl sm:text-2xl">$212</p>
@@ -47,18 +47,18 @@ export const TopSelling = () => {
               </div>
 
               <div>
-                <div className=" bg-gray-200 rounded-xl flex">
+                <div className=" bg-gray-200 rounded-xl flex mb-4">
                   <Image
                     src={tshirt}
                     alt="tshirt"
                     className="flex-1 object-cover"
                   />
                 </div>
-                <div className="">
+                <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
                     Clourage Graphic T-shirt
                   </p>
-                  <div className="">
+                  <div className="space-y-1">
                     <Image src={star2} alt="stars" />
                     <p className="font-bold text-xl sm:text-2xl">$145</p>
                   </div>
@@ -66,18 +66,18 @@ export const TopSelling = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center">
+                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
                   <Image
                     src={short}
                     alt="short"
                     className="object-cover flex-1"
                   />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
                     Loose Fit Bermuda Shorts
                   </p>
-                  <div className="">
+                  <div className="space-y-1">
                     <Image src={star3} alt="stars" />
                     <p className="font-bold text-xl sm:text-2xl">$80</p>
                   </div>
@@ -85,18 +85,18 @@ export const TopSelling = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center">
+                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
                   <Image
                     src={jeans}
                     alt="tshirt"
                     className="object-cover flex-1"
                   />
                 </div>
-                <div>
+                <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
                     Faded Skinny Jeans
                   </p>
-                  <div className="">
+                  <div className="space-y-1">
                     <Image src={star4} alt="stars" />
                     <p className="font-bold text-xl sm:text-2xl">$210</p>
                   </div>

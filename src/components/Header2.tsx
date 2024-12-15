@@ -20,7 +20,8 @@ export const Header2 = () => {
 
           <div className="hidden sm:flex gap-3">
             <div className="flex">
-              <p>Shop</p><Image className="" src={downarrow} alt="logo"/>
+              <Link href="/shop">Shop</Link>
+              <Image className="" src={downarrow} alt="logo"/>
             </div>
             <div>
               <p>On Sale</p>
