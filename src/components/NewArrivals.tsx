@@ -93,6 +93,7 @@ export const NewArrivals = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
           <div className="flex justify-center mt-8"><button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">

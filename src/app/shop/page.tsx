@@ -14,7 +14,7 @@ import polo2 from "../../../public/images/polo2.png";
 import shopshirt from "../../../public/images/shopshrit.png";
 import shopshirt2 from "../../../public/images/shirt2.png";
 import shopstar1 from "../../../public/images/shirtstar.svg";
-import shopstar2 from "../../../public/images/tshirtstar.svg"
+import shopstar2 from "../../../public/images/tshirtstar.svg";
 import shopstar3 from "../../../public/images/stars.svg";
 import shopstar4 from "../../../public/images/jeansstar.svg";
 
@@ -85,12 +85,12 @@ const Shop = () => {
               </div>
               <p className="mt-5 text-sm sm:text-base">
                 This graphic t-shirt which is perfect for any occasion. Crafted
-                from a soft and breathable fabric, it offers superior comfort and
-                style.
+                from a soft and breathable fabric, it offers superior comfort
+                and style.
               </p>
             </div>
-          
-           <div className="right-one border-b-2 border-gray-300 pb-4">
+
+            <div className="right-one border-b-2 border-gray-300 pb-4">
               <p className="text-sm sm:tect-base mt-6">Select Colors</p>
               <div className="flex gap-4 mt-4">
                 <button className="w-10 sm:w-[37] sm:h-[37] rounded-full bg-lime-950 px-[14px] py-[7px] text-lime-950">
@@ -104,22 +104,22 @@ const Shop = () => {
                 </button>
               </div>
             </div>
-           
+
             <div className="right-one border-b-2 border-gray-300 pb-4">
               <p className="text-sm mt-6">Choose Size</p>
               <div className="flex justify-around mt-4">
-              <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                Small
-              </button>
-              <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                Medium
-              </button>
-              <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                Large
-              </button>
-              <button className="text-sm bg-gray-200 w-[90px] px-[14px] py-3 rounded-full">
-                X-Large
-              </button>
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
+                  Small
+                </button>
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
+                  Medium
+                </button>
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
+                  Large
+                </button>
+                <button className="text-sm bg-gray-200 w-[90px] px-[14px] py-3 rounded-full">
+                  X-Large
+                </button>
               </div>
             </div>
             <hr className="bg-gray-200 mb-6" />
@@ -315,14 +315,18 @@ const Shop = () => {
                 </div>
                 <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
-                   Ploo with Contrast Trims
+                    Polo with Contrast Trims
                   </p>
                   <div className="space-y-1">
                     <Image src={shopstar2} alt="stars" />
                     <div className="flex items-center gap-2">
                       <p className="font-bold text-xl sm:text-2xl">$212</p>
-                      <p className="font-bold text-xl sm:text-2xl line-through opacity-40">$242</p>
-                      <p className="text-red-400 text-[10px] py-1 px-2 sm:text-sm ml-2 text-cente rounded-3xl">-20%</p>
+                      <p className="font-bold text-xl sm:text-2xl line-through opacity-40">
+                        $242
+                      </p>
+                      <p className="text-red-400 text-[10px] py-1 px-2 sm:text-sm ml-2 text-cente rounded-3xl">
+                        -20%
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -343,7 +347,7 @@ const Shop = () => {
                   <div className="space-y-1">
                     <Image src={shopstar3} alt="stars" />
                     <div className="flex gap-2">
-                      <p className="font-bold text-xl sm:text-2xl">$240</p>
+                      <p className="font-bold text-xl sm:text-2xl">$145</p>
                     </div>
                   </div>
                 </div>
@@ -351,7 +355,11 @@ const Shop = () => {
 
               <div className="hidden sm:block">
                 <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
-                  <Image src={polo1} alt="polo" className="object-cover flex-1" />
+                  <Image
+                    src={polo1}
+                    alt="polo"
+                    className="object-cover flex-1"
+                  />
                 </div>
                 <div className="space-y-1">
                   <p className="text-base font-bold sm:text-xl">
@@ -379,20 +387,26 @@ const Shop = () => {
                   <div className="space-y-1">
                     <Image src={shopstar1} alt="stars" />
                     <div className="flex items-center gap-2">
-                    <p className="font-bold text-xl sm:text-2xl">$130</p>
-                    <p className="font-bold text-xl sm:text-2xl line-through opacity-40">$150</p>
-                    <p className="text-red-400 text-[10px] py-1 px-2 sm:text-sm ml-2 text-cente rounded-3xl">-30%</p>
+                      <p className="font-bold text-xl sm:text-2xl">$120</p>
+                      <p className="font-bold text-xl sm:text-2xl line-through opacity-40">
+                        $150
+                      </p>
+                      <p className="text-red-400 text-[10px] py-1 px-2 sm:text-sm ml-2 text-cente rounded-3xl">
+                        -30%
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex justify-center mt-8"><button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">
-            Shop Now</button></div>
-          <hr className="w-full border-gray-300 mt-[40px] sm:mt-16"/>
+          <div className="flex justify-center mt-8">
+            <button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">
+              Shop Now
+            </button>
+          </div>
+          <hr className="w-full border-gray-300 mt-[40px] sm:mt-16" />
         </div>
-
       </div>
     </section>
   );
