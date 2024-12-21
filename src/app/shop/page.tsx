@@ -67,8 +67,8 @@ const Shop = () => {
           </div>
 
           <div className="">
-            <div className="right-one border-b-2 border-gray-300 pb-4">
-              <div className="mt-5 space-y-3">
+            <div className="right-one pb-4">
+              <div className="mt-5 md:mt-0 space-y-3">
                 <h1 className="font-[900] text-2xl sm:text-4xl">
                   ONE LIFE GRAPHIC T-SHIRT
                 </h1>
@@ -89,8 +89,10 @@ const Shop = () => {
                 and style.
               </p>
             </div>
+            <hr className="border-gray-300 border-b my-6" />
 
-            <div className="right-one border-b-2 border-gray-300 pb-4">
+
+            <div className="right-one pb-4">
               <p className="text-sm sm:tect-base mt-6">Select Colors</p>
               <div className="flex gap-4 mt-4">
                 <button className="w-10 sm:w-[37] sm:h-[37] rounded-full bg-lime-950 px-[14px] py-[7px] text-lime-950">
@@ -104,8 +106,9 @@ const Shop = () => {
                 </button>
               </div>
             </div>
+            <hr className="border-gray-300 border-b mt-6" />
 
-            <div className="right-one border-b-2 border-gray-300 pb-4">
+            <div className="right-one pb-4">
               <p className="text-sm mt-6">Choose Size</p>
               <div className="flex justify-around mt-4">
                 <button className="text-sm bg-gray-300 w-[76px] px-[14px] py-3 rounded-full">
@@ -122,7 +125,8 @@ const Shop = () => {
                 </button>
               </div>
             </div>
-            <hr className="bg-gray-300 mb-6" />
+            <hr className="border-gray-300 border-b my-6" />
+
             <div className="flex gap-4 ">
               <button className="basis-1/4 bg-gray-300 rounded-full flex justify-around items-center">
                 <span className="font-bold text-2xl">-</span>
