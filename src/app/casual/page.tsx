@@ -23,9 +23,9 @@ import leftarrow from "../../../public/images/arrow-left.png";
 
 const Casual = () => {
   return (
-    <section className="casula-wearing">
-      <div className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 border-t-2 border-t-gray-200">
-        <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5">
+    <section className="casual-wearing">
+      <div className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 ">
+        <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5 border-t-2 border-t-gray-300">
           <p className="opacity-35">Home</p>
           <Image
             src={downArrow}
@@ -143,32 +143,32 @@ const Casual = () => {
               </div>
               <div>
                 <div className="space-x-4 space-y-2">
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     XX-Small
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     X-Small
                   </button>
 
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     Small
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     Medium
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     Large
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     X-Large
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     XX-Large
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     3X-Large
                   </button>
-                  <button className="w-24 h-10 text-sm bg-gray-200 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
+                  <button className="w-24 h-10 text-sm bg-gray-300 hover:bg-black hover:border hover:text-white duration-300 rounded-full">
                     4X-Large
                   </button>
                 </div>
@@ -230,7 +230,7 @@ const Casual = () => {
                 </div>
               </div>
               <div className="flex justify-center mt-8">
-                <button className="w-full text-center py-2 px-6 text-lg bg-black text-white border-2 border-black rounded-full hover:bg-gray-200 hover:text-black cursor-pointer transition ease-linear duration-300">
+                <button className="w-full text-center py-2 px-6 text-lg bg-black text-white border-2 border-black rounded-full hover:bg-gray-300 hover:text-black cursor-pointer transition ease-linear duration-300">
                   Apply Filter
                 </button>
               </div>
@@ -257,7 +257,7 @@ const Casual = () => {
               <div>
                 <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
                   <div>
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-lg flex mb-4">
                       <Image
                         src={shirt1}
                         alt="shirt"
@@ -278,7 +278,7 @@ const Casual = () => {
                   </div>
 
                   <div className="">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-lg flex mb-4">
                       <Image
                         src={shirt2}
                         alt="polo"
@@ -297,7 +297,7 @@ const Casual = () => {
                   </div>
 
                   <div className="">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt3}
                         alt="tshirt"
@@ -324,7 +324,7 @@ const Casual = () => {
                   </div>
 
                   <div>
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt4}
                         alt="jeans"
@@ -351,7 +351,7 @@ const Casual = () => {
                   </div>
 
                   <div className="">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt5}
                         alt="shirt"
@@ -370,7 +370,7 @@ const Casual = () => {
                   </div>
 
                   <div className="">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt6}
                         alt="tshirt"
@@ -389,7 +389,7 @@ const Casual = () => {
                   </div>
 
                   <div className="hidden md:block">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt7}
                         alt="shirt"
@@ -417,7 +417,7 @@ const Casual = () => {
                   </div>
 
                   <div className="hidden md:block">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt8}
                         alt="tshirt"
@@ -436,7 +436,7 @@ const Casual = () => {
                   </div>
 
                   <div className="hidden md:block">
-                    <div className=" bg-gray-200 rounded-xl flex mb-4">
+                    <div className=" bg-gray-300 rounded-xl flex mb-4">
                       <Image
                         src={shirt9}
                         alt="short"

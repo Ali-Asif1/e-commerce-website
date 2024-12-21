@@ -19,7 +19,7 @@ export const NewArrivals = () => {
           <div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <div className=" bg-gray-200 rounded-xl flex mb-4">
+                <div className=" bg-gray-300 rounded-lg flex mb-4">
                   <Image
                     src={tshirt}
                     alt="tshirt"
@@ -38,7 +38,7 @@ export const NewArrivals = () => {
               </div>
 
               <div>
-                <div className=" bg-gray-200 rounded-xl flex mb-4">
+                <div className=" bg-gray-300 rounded-lg flex mb-4">
                   <Image
                     src={jeans}
                     alt="jeans"
@@ -61,7 +61,7 @@ export const NewArrivals = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-300 rounded-lg flex justify-center mb-4">
                   <Image src={shirt} alt="shirt" className="object-cover flex-1" />
                 </div>
                 <div className="space-y-1">
@@ -76,7 +76,7 @@ export const NewArrivals = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-300 rounded-lg flex justify-center mb-4">
                   <Image
                     src={tshirt2}
                     alt="tshirt"

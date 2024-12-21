@@ -9,7 +9,7 @@ export const DressStyle = () => {
   return (
     <section className='dress-style'>
       <div className='px-4 sm:px-8 lg:px-16 pt-16'>
-       <div className='bg-gray-200 rounded-3xl px-6 py-8 '>
+       <div className='bg-gray-300 rounded-3xl px-6 py-8 '>
          <h1 className='text-center mb-10 md:mb-16 font-[900] text-2xl sm:text-3xl md:text-4xl'>BROWSE BY DRESS STYLE</h1>
          <div className='grid md:grid-cols-3 gap-5'>
              <div className='h-[190px] md:h-full overflow-hidden rounded-2xl'><Image src={dress1} alt='dress1' className='w-full h-full'/></div>

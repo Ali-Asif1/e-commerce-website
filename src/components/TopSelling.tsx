@@ -20,7 +20,7 @@ export const TopSelling = () => {
           <div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <div className=" bg-gray-200 rounded-xl flex mb-4">
+                <div className=" bg-gray-300 rounded-xl flex mb-4">
                   <Image
                     src={shirt}
                     alt="shirt"
@@ -47,7 +47,7 @@ export const TopSelling = () => {
               </div>
 
               <div>
-                <div className=" bg-gray-200 rounded-xl flex mb-4">
+                <div className=" bg-gray-300 rounded-xl flex mb-4">
                   <Image
                     src={tshirt}
                     alt="tshirt"
@@ -66,7 +66,7 @@ export const TopSelling = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-300 rounded-xl flex justify-center mb-4">
                   <Image
                     src={short}
                     alt="short"
@@ -85,7 +85,7 @@ export const TopSelling = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-300 rounded-xl flex justify-center mb-4">
                   <Image
                     src={jeans}
                     alt="tshirt"
@@ -142,7 +142,7 @@ export const TopSelling = () => {
       </div>
     </div>
     <div className="flex justify-center ">
-    <button className="inline-flex text-black bg-gray-200 my-3 rounded border-0 py-3 px-12 focus:outline-none text-lg">View All</button>
+    <button className="inline-flex text-black bg-gray-300 my-3 rounded border-0 py-3 px-12 focus:outline-none text-lg">View All</button>
 </div> */}
     </>
   );
