@@ -230,7 +230,7 @@ const Casual = () => {
                 </div>
               </div>
               <div className="flex justify-center mt-8">
-                <button className="w-full text-center py-2 px-6 text-lg bg-black text-white border-2 border-black rounded-full hover:bg-gray-300 hover:text-black cursor-pointer transition ease-linear duration-300">
+                <button className="w-full text-center py-2 px-6 text-lg bg-black active:scale-90 text-white border-2 border-black rounded-full hover:bg-gray-300 hover:text-black cursor-pointer transition ease-linear duration-300">
                   Apply Filter
                 </button>
               </div>
@@ -460,7 +460,7 @@ const Casual = () => {
 
             <div className="flex justify-between">
               <div className="flex gap-2">
-                <Image src={leftarrow} className="" alt="leftarrow" />
+                <Image src={leftarrow} className="cursor-pointer active:scale-90" alt="leftarrow" />
                 <p className="">Previous</p>
               </div>
               <div className="flex">
@@ -476,7 +476,7 @@ const Casual = () => {
                 <p className="">Next</p>
                 <Image
                   src={leftarrow}
-                  className="rotate-180"
+                  className="rotate-180 cursor-pointer active:scale-90"
                   alt="rightarrow"
                 />
               </div>

@@ -161,14 +161,14 @@ const Cart = () => {
                     <input
                       type=" text"
                       placeholder="Add promo code"
-                      className="bg-gray-300 max-w-32"
+                      className="bg-gray-300 max-w-32 outline-none"
                     />
                   </button>
-                  <button className="bg-black text-white w-[30%] h-12 rounded-full">
+                  <button className="bg-black text-white w-[30%] h-12 rounded-full active:scale-90">
                     Apply
                   </button>
                 </div>
-                <button className="bg-black text-white w-full h-12 rounded-full mt-4">
+                <button className="bg-black text-white w-full h-12 rounded-full mt-4 active:scale-90">
                   Go To Checkout
                 </button>
               </div>

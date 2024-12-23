@@ -133,7 +133,7 @@ const Shop = () => {
                 <p className="text-[10px]">1</p>
                 <span className="font-bold text-2xl">+</span>
               </button>
-              <button className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 duration-300">
+              <button className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300">
                 Add to Cart
               </button>
             </div>
@@ -165,7 +165,7 @@ const Shop = () => {
               <Image src={downArrow} alt="arrow" />
             </div>
             <div className="flex">
-              <button className="bg-black sm:w-[166px] px max-w-full text-white text-sm py-3 px-6 rounded-full border-2 border-black hover:text-black hover:bg-gray-100 duration-300">
+              <button className="bg-black sm:w-[166px] px max-w-full text-white text-sm py-3 px-6 rounded-full active:scale-90 border-2 border-black hover:text-black hover:bg-gray-100 duration-300">
                 Write a Review
               </button>
             </div>
@@ -298,7 +298,7 @@ const Shop = () => {
           </div>
         </div>
         <div className="flex justify-center mt-8">
-          <button className="w-full sm:w-[230px] border-gray-300 bg:gray-300 border-2 text-black rounded-full px-5 py-3 hover:bg-black hover:text-white cursor-pointer duration-300">
+          <button className="w-full sm:w-[230px] border-gray-300 bg:gray-300 border-2 text-black rounded-full px-5 py-3 hover:bg-black hover:text-white cursor-pointer active:scale-90 duration-300">
             Load More Previews
           </button>
         </div>
@@ -405,7 +405,7 @@ const Shop = () => {
             </div>
           </div>
           <div className="flex justify-center mt-8">
-            <button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">
+            <button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black active:scale-90 border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">
               Shop Now
             </button>
           </div>

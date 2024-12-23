@@ -9,8 +9,8 @@ export const Update = () => {
         <div className='flex flex-col md:flex-row bg-black p-6 md:p-8 lg:py-9 lg:px-16 lg:gap-28 items-center gap-4 rounded-3xl'>
             <p className='text-white text-3xl text-left font-[900] sm:text-4xl'>STAY UPTO DATE ABOUT OUR LATEST OFFERS</p>
             <div className='flex flex-col items-center gap-4 w-full md:w-auto'>
-                <button className='bg-gray-100 w-full md:w-[350px] px-5 py-3 lg:px-6 lg:py-4 rounded-full flex items-center pl-6 gap-2'><Image src={email} alt='email' /><input type=" text" placeholder='Enter your email' /></button>
-                <button className='bg-gray-100 w-full md:w-[350px] px-5 py-3 lg:px-6 lg:py-4 rounded-full flex items-center justify-center pl-6 gap-2'><p className='font-semibold'>Subcribe to Newsletter</p></button>
+                <button className='bg-gray-100 w-full md:w-[350px] px-5 py-3 lg:px-6 lg:py-4 rounded-full flex items-center pl-6 gap-2'><Image src={email} alt='email' /><input type=" text" placeholder='Enter your email' className='outline-transparent' /></button>
+                <button className='bg-gray-100 w-full md:w-[350px] px-5 py-3 lg:px-6 lg:py-4 rounded-full flex items-center justify-center pl-6 gap-2 font-semibold active:scale-95'>Subcribe to Newsletter</button>
             </div>
         </div>
       </div>
