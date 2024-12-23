@@ -36,7 +36,7 @@ export const Header2 = () => {
           <div className="flex-1 hidden md:block  rounded-ful max-w-[577px] bg-gray-300 rounded-full">
             <div className="flex items-center opacity-3 h-10 gap-3 pl-[18px]">
               <Image src={search} alt="logo" className="opacity-35"/>
-              <input type="text" placeholder="Search for products..." className="hidden md:block flex-1 bg-gray-300 rounded-full w-0"/>
+              <input type="text" placeholder="Search for products..." className="hidden md:block flex-1 bg-gray-300 rounded-full w-0 outline-none pl-1"/>
             </div>
           </div>
 
