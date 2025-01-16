@@ -5,7 +5,7 @@ import herostar from "../../public/images/herostar.png";
 
 export const Hero = () => {
   return (
-    <section className="hero-section bg-gray-300">
+    <section className="hero-section bg-gray-200">
       <div className="px-4 sm:px-8 lg:px-16 pt-3">
         <div className="sm:flex">
           <div className="space-y-3 sm:w-1/2 sm:pt-20 md:pb-4">

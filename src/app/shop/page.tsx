@@ -21,8 +21,8 @@ import shopstar4 from "../../../public/images/jeansstar.svg";
 const Shop = () => {
   return (
     <section className="shop">
-      <div className="px-4 sm:px-8 md:px-12 lg:px-16 border-t-2 ">
-        <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5 border-t-2 border-t-gray-300">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16">
+        <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5 border-t border-t-gray-200">
           <p className="opacity-35">Home</p>
           <Image
             src={downArrow}
@@ -46,20 +46,20 @@ const Shop = () => {
         <div className="md:flex gap-8">
           <div className="sm:basis-[] ">
             <div className="flex flex-col sm:flex-row-reverse gap-4">
-              <div className="w-[358] sm:w-[444px] bg-gray-300 rounded-lg">
+              <div className="w-[358] sm:w-[444px] bg-gray-200 rounded-lg">
                 <Image src={shirt1} alt="shirt" className="w-full" />
               </div>
               <div className="flex sm:flex-col justify-around">
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-300 rounded-lg">
-                  {" "}
+                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg">
+                  
                   <Image src={shirt1} alt="shirt" className="w-full h-full" />
                 </div>
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-300 rounded-lg">
-                  {" "}
+                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg">
+              
                   <Image src={shirt2} alt="shirt" className="w-full h-full" />
                 </div>
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-300 rounded-lg overflow-hidden">
-                  {" "}
+                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg overflow-hidden">
+                  
                   <Image src={shirt3} alt="shirt" className="" />
                 </div>
               </div>
@@ -89,7 +89,7 @@ const Shop = () => {
                 and style.
               </p>
             </div>
-            <hr className="border-gray-300 border-b my-6" />
+            <hr className="border-gray-200 border-b my-6" />
 
 
             <div className="right-one pb-4">
@@ -106,29 +106,29 @@ const Shop = () => {
                 </button>
               </div>
             </div>
-            <hr className="border-gray-300 border-b mt-6" />
+            <hr className="border-gray-200 border-b mt-6" />
 
             <div className="right-one pb-4">
               <p className="text-sm mt-6">Choose Size</p>
               <div className="flex justify-around mt-4">
-                <button className="text-sm bg-gray-300 w-[76px] px-[14px] py-3 rounded-full">
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
                   Small
                 </button>
-                <button className="text-sm bg-gray-300 w-[76px] px-[14px] py-3 rounded-full">
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
                   Medium
                 </button>
-                <button className="text-sm bg-gray-300 w-[76px] px-[14px] py-3 rounded-full">
+                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
                   Large
                 </button>
-                <button className="text-sm bg-gray-300 w-[90px] px-[14px] py-3 rounded-full">
+                <button className="text-sm bg-gray-200 w-[90px] px-[14px] py-3 rounded-full">
                   X-Large
                 </button>
               </div>
             </div>
-            <hr className="border-gray-300 border-b my-6" />
+            <hr className="border-gray-200 border-b my-6" />
 
             <div className="flex gap-4 ">
-              <button className="basis-1/4 bg-gray-300 rounded-full flex justify-around items-center">
+              <button className="basis-1/4 bg-gray-200 rounded-full flex justify-around items-center">
                 <span className="font-bold text-2xl">-</span>
                 <p className="text-[10px]">1</p>
                 <span className="font-bold text-2xl">+</span>
@@ -141,13 +141,13 @@ const Shop = () => {
         </div>
 
         <div className="flex justify-between items-center pt-11 sm:pt-16 pb-8 sm:pb-10 text-center cursor-pointer text-base sm:text-xl">
-          <p className="border-b-2 border-gray-300 hover:border-b-black basis-1/3">
+          <p className="border-b-2 border-gray-200 hover:border-b-black basis-1/3">
             Product Details
           </p>
-          <p className="border-b-2 border-gray-300 hover:border-b-black basis-1/3">
+          <p className="border-b-2 border-gray-200 hover:border-b-black basis-1/3">
             Rating & Reviews
           </p>
-          <p className="border-b-2 border-gray-300 hover:border-b-black basis-1/3">
+          <p className="border-b-2 border-gray-200 hover:border-b-black basis-1/3">
             FAQs
           </p>
         </div>
@@ -310,7 +310,7 @@ const Shop = () => {
           <div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <div className=" bg-gray-300 rounded-xl flex mb-4">
+                <div className=" bg-gray-200 rounded-xl flex mb-4">
                   <Image
                     src={polo2}
                     alt="polo2"
@@ -337,7 +337,7 @@ const Shop = () => {
               </div>
 
               <div>
-                <div className=" bg-gray-300 rounded-xl flex mb-4">
+                <div className=" bg-gray-200 rounded-xl flex mb-4">
                   <Image
                     src={shopshirt}
                     alt="shirt"
@@ -358,7 +358,7 @@ const Shop = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-300 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
                   <Image
                     src={polo1}
                     alt="polo"
@@ -377,7 +377,7 @@ const Shop = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-300 rounded-xl flex justify-center mb-4">
+                <div className=" bg-gray-200 rounded-xl flex justify-center mb-4">
                   <Image
                     src={shopshirt2}
                     alt="tshirt"

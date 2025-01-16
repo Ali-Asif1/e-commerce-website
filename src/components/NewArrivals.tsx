@@ -6,6 +6,7 @@ import jeans from "../../public/images/jeans.png";
 import tshirt2 from "../../public/images/tshirt2.png";
 import stars3 from "../../public/images/stars.svg";
 import stars4 from "../../public/images/jeansstar.svg";
+import Link from "next/link";
 
 
 export const NewArrivals = () => {
@@ -19,7 +20,7 @@ export const NewArrivals = () => {
           <div>
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               <div>
-                <div className=" bg-gray-300 rounded-lg flex mb-4">
+                <div className=" bg-gray-200 rounded-lg flex mb-4">
                   <Image
                     src={tshirt}
                     alt="tshirt"
@@ -38,7 +39,7 @@ export const NewArrivals = () => {
               </div>
 
               <div>
-                <div className=" bg-gray-300 rounded-lg flex mb-4">
+                <div className=" bg-gray-200 rounded-lg flex mb-4">
                   <Image
                     src={jeans}
                     alt="jeans"
@@ -61,7 +62,7 @@ export const NewArrivals = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-300 rounded-lg flex justify-center mb-4">
+                <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
                   <Image src={shirt} alt="shirt" className="object-cover flex-1" />
                 </div>
                 <div className="space-y-1">
@@ -76,7 +77,7 @@ export const NewArrivals = () => {
               </div>
 
               <div className="hidden sm:block">
-                <div className=" bg-gray-300 rounded-lg flex justify-center mb-4">
+                <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
                   <Image
                     src={tshirt2}
                     alt="tshirt"
@@ -96,9 +97,9 @@ export const NewArrivals = () => {
 
             </div>
           </div>
-          <div className="flex justify-center mt-8"><button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300">
+          <Link href={'/shop'}><div className="flex justify-center mt-8"><button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300 active:scale-95">
             Shop Now</button></div>
-          <hr className="w-full border-gray-300 mt-[40px] sm:mt-16"/>
+          <hr className="w-full border-gray-200 mt-[40px] sm:mt-16"/></Link>
         </div>
       </section>
     </>

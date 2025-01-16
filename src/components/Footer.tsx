@@ -9,7 +9,7 @@ import logo from "../../public/images/logo.png";
 export const Footer = () => {
   return (
     <section className="footer">
-      <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 bg-gray-300">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 py-8 bg-gray-200">
         <div className="px-4 mx-auto sm:px-6 lg:px-8 max-w-7xl">
           <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-12 gap-y-12 gap-x-8 xl:gap-x-12">
             <div className="col-span-2 md:col-span-4 xl:pr-8">
@@ -25,7 +25,7 @@ export const Footer = () => {
                   <a
                     href="#"
                     title=""
-                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
+                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-200 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
                   >
                     <svg
                       className="w-4 h-4"
@@ -42,7 +42,7 @@ export const Footer = () => {
                   <a
                     href="#"
                     title=""
-                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
+                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-200 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
                   >
                     <svg
                       className="w-4 h-4"
@@ -59,7 +59,7 @@ export const Footer = () => {
                   <a
                     href="#"
                     title=""
-                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
+                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-200 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
                   >
                     <svg
                       className="w-4 h-4"
@@ -78,7 +78,7 @@ export const Footer = () => {
                   <a
                     href="#"
                     title=""
-                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-300 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
+                    className="flex items-center justify-center text-gray-800 transition-all duration-200 bg-transparent border border-gray-200 rounded-full w-7 h-7 hover:text-white  hover:bg-black hover:border-black focus:border-black"
                   >
                     <svg
                       className="w-4 h-4"
@@ -234,7 +234,7 @@ export const Footer = () => {
             </div>
           </div>
 
-          <hr className="w-full border-b border-gray-300 mt-[40px] sm:mt-16 mb-4"/>
+          <hr className="w-full border-b border-gray-200 mt-[40px] sm:mt-16 mb-4"/>
 
 
           <div className="flex flex-col sm:flex-row items-center sm:justify-between">
