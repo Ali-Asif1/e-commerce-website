@@ -5,6 +5,7 @@ import { Header1 } from "@/components/Header1";
 import { Header2 } from "@/components/Header2";
 import { Update } from "@/components/Update";
 import { Footer } from "@/components/Footer";
+import { Providers } from "./provider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header1 />
-        <Header2 />
-        {children}
-        <Update />
-        <Footer />
-        </body>
+        <Providers>
+          <Header1 />
+          <Header2 />
+          {children}
+          <Update />
+          <Footer />
+        </Providers>
+      </body>
     </html>
   );
 }

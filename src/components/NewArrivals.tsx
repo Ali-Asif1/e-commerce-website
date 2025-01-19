@@ -7,6 +7,7 @@ import tshirt2 from "../../public/images/tshirt2.png";
 import stars3 from "../../public/images/stars.svg";
 import stars4 from "../../public/images/jeansstar.svg";
 import Link from "next/link";
+import { AddToCartButton } from "./AddToCartButton";
 
 
 export const NewArrivals = () => {
@@ -36,6 +37,7 @@ export const NewArrivals = () => {
                     <p className="font-bold text-xl sm:text-2xl">$120</p>
                   </div>
                 </div>
+               <AddToCartButton />
               </div>
 
               <div>

@@ -11,7 +11,7 @@ const Cart = () => {
   return (
     <section className="cart">
       <div className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16">
-        <div className="border-t-2 border-t-gray-300">
+        <div className="border-t-2 border-t-gray-200">
           <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5">
             <p className="opacity-35">Home</p>
             <Image
@@ -27,7 +27,7 @@ const Cart = () => {
         <div className="md:grid md:grid-cols-5 gap-5">
           <div className="border border-gray-300 p-4 rounded-xl col-span-3">
             <div className="flex gap-2">
-              <div className=" bg-gray-300 rounded-md flex">
+              <div className=" bg-gray-200 rounded-md flex">
                 <Image
                   src={shirt1}
                   alt="shirt"
@@ -52,7 +52,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between mt-[10px]">
                   <p className="font-bold text-xl sm:text-2xl">$145</p>
-                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-300 rounded-full flex justify-around items-center">
+                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-200 rounded-full flex justify-around items-center">
                     <span className="font-bold text-2xl">-</span>
                     <p className="text-sm">1</p>
                     <span className="font-bold text-2xl">+</span>
@@ -60,10 +60,10 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-            <hr className="w-full border-b border-gray-300 my-4" />
+            <hr className="w-full border-b border-gray-200 my-4" />
 
             <div className="flex gap-2">
-              <div className=" bg-gray-300 rounded-md flex">
+              <div className=" bg-gray-200 rounded-md flex">
                 <Image
                   src={shirt4}
                   alt="shirt"
@@ -87,7 +87,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between mt-[10px]">
                   <p className="font-bold text-xl sm:text-2xl">$240</p>
-                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-300 rounded-full flex justify-around items-center">
+                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-200 rounded-full flex justify-around items-center">
                     <span className="font-bold text-2xl">-</span>
                     <p className="text-sm">1</p>
                     <span className="font-bold text-2xl">+</span>
@@ -95,10 +95,10 @@ const Cart = () => {
                 </div>
               </div>
             </div>
-            <hr className="w-full border-b border-gray-300 my-4" />
+            <hr className="w-full border-b border-gray-200 my-4" />
 
             <div className="flex gap-2">
-              <div className=" bg-gray-300 rounded-md flex">
+              <div className=" bg-gray-200 rounded-md flex">
                 <Image
                   src={shirt5}
                   alt="shirt"
@@ -122,7 +122,7 @@ const Cart = () => {
                 </div>
                 <div className="flex justify-between mt-[10px]">
                   <p className="font-bold text-xl sm:text-2xl">$180</p>
-                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-300 rounded-full flex justify-around items-center">
+                  <button className="w-[105px] md:w-[126px] md:h-11 bg-gray-200 rounded-full flex justify-around items-center">
                     <span className="font-bold text-2xl">-</span>
                     <p className="text-sm">1</p>
                     <span className="font-bold text-2xl">+</span>
@@ -148,7 +148,7 @@ const Cart = () => {
                   <p className="text-base opacity-60 ">Delivery Free</p>
                   <p className="text-base font-bold">$15</p>
                 </div>
-                <hr className="w-full border-b border-gray-300 my-5" />
+                <hr className="w-full border-b border-gray-200 my-5" />
 
                 <div className="flex justify-between">
                   <p className="text-base ">Total</p>
@@ -156,12 +156,12 @@ const Cart = () => {
                 </div>
 
                 <div className="flex items-center justify-between gap-3 mt-4">
-                  <button className="flex items-center w-[70%] h-[48px] rounded-full bg-gray-300 p-4 gap-3">
+                  <button className="flex items-center w-[70%] h-[48px] rounded-full bg-gray-200 p-4 gap-3">
                     <Image src={code} className=" opacity-50" alt="downarrow" />
                     <input
                       type=" text"
                       placeholder="Add promo code"
-                      className="bg-gray-300 max-w-32 outline-none"
+                      className="bg-gray-200 max-w-32 outline-none"
                     />
                   </button>
                   <button className="bg-black text-white w-[30%] h-12 rounded-full active:scale-90">

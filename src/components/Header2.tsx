@@ -27,18 +27,18 @@ export const Header2 = () => {
                 priority
               />
               {menuOpen ? (
-                <div className="absolute w-[92%] mt-4 max-h-full bg-white rounded-lg z-10 duration-200 flex flex-col gap-6 font-semibold p-5">
+                <div className="absolute w-[92%] mt-4 max-h-full bg-gray-200 rounded-lg z-10 duration-200 flex flex-col gap-6 font-semibold p-5">
                   <div className="space-y-2">
                     <Link href={""}>Shop</Link>
-                    <hr className="border-2"/>
+                    <hr className="border border-gray-300"/>
                   </div >
                   <div className="space-y-2">
                     <Link href={""}>On Sale</Link>
-                    <hr className=" border-2"/>
+                    <hr className="border border-gray-300"/>
                   </div>
                   <div className="space-y-2">
                     <Link href={""}>New Arrivals</Link>
-                    <hr className=" border-2"/>
+                    <hr className="border border-gray-300"/>
                   </div>
                   <div>
                     <Link href={""}>Brands</Link>
@@ -67,7 +67,7 @@ export const Header2 = () => {
               <p>Brands</p>
             </div>
           </div>
-          <div className="flex-1 hidden md:block  rounded-ful max-w-[577px] bg-gray-200 rounded-full">
+          <div className="flex-1 hidden lg:block  rounded-ful max-w-[577px] bg-gray-200 rounded-full">
             <div className="flex items-center opacity-3 h-10 gap-3 pl-[18px]">
               <Image src={search} priority alt="logo" className="opacity-35" />
               <input
@@ -80,7 +80,9 @@ export const Header2 = () => {
 
           <div className="flex gap-4">
             <Image src={search}  priority alt="logo" className="block md:hidden" />
-            <Image src={cart}  priority alt="logo" />
+            <div className="relative"><Link href={'/cart'}><Image src={cart}  priority alt="logo" /></Link>
+            <span className="absolute bottom-[14px] left-5 text-sm">0</span>
+            </div>
             <Image src={signup}  priority alt="logo" />
           </div>
         </div>
