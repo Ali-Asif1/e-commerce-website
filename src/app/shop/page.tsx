@@ -20,56 +20,22 @@ import shopstar4 from "../../../public/images/jeansstar.svg";
 
 const Shop = () => {
   return (
-    <section className="shop">
-      <div className="px-4 sm:px-8 md:px-12 lg:px-16">
-        <div className="flex items-center gap-2 mb-6 md:mb-9 pt-5 border-t border-t-gray-200">
-          <p className="opacity-35">Home</p>
-          <Image
-            src={downArrow}
-            className="-rotate-90 opacity-35"
-            alt="downarrow"
-          />
-          <p className="opacity-35">Shop</p>
-          <Image
-            src={downArrow}
-            className="-rotate-90 opacity-35"
-            alt="downarrow"
-          />
-          <p className="opacity-35">Men</p>
-          <Image
-            src={downArrow}
-            className=" -rotate-90 opacity-35"
-            alt="downarrow"
-          />
-          <p>T-shirts</p>
-        </div>
-        <div className="md:flex gap-8">
-          <div className="sm:basis-[] ">
-            <div className="flex flex-col sm:flex-row-reverse gap-4">
-              <div className="w-[358] sm:w-[444px] bg-gray-200 rounded-lg">
-                <Image src={shirt1} alt="shirt" className="w-full" />
-              </div>
-              <div className="flex sm:flex-col justify-around">
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg">
-                  
-                  <Image src={shirt1} alt="shirt" className="w-full h-full" />
-                </div>
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg">
-              
-                  <Image src={shirt2} alt="shirt" className="w-full h-full" />
-                </div>
-                <div className="sm:w-[152px] sm:h-[168px] w-[112px] h-[106] bg-gray-200 rounded-lg overflow-hidden">
-                  
-                  <Image src={shirt3} alt="shirt" className="" />
-                </div>
-              </div>
-            </div>
+    <section className="product info">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-16 mt-5 md:mt-10">
+        <div className="md:grid grid-cols-2 gap-5">
+          <div className="w-full bg-gray-200 rounded-lg">
+            <Image
+              src={shirt1}
+              alt="shirt"
+              width={500}
+              height={500}
+              className="object-cover"
+            />
           </div>
-
-          <div className="">
+          <div>
             <div className="right-one pb-4">
               <div className="mt-5 md:mt-0 space-y-3">
-                <h1 className="font-[900] text-2xl sm:text-4xl">
+                <h1 className="font-[800] text-2xl sm:text-4xl">
                   ONE LIFE GRAPHIC T-SHIRT
                 </h1>
                 <Image src={stars} alt="shirt" />
@@ -90,7 +56,6 @@ const Shop = () => {
               </p>
             </div>
             <hr className="border-gray-200 border-b my-6" />
-
 
             <div className="right-one pb-4">
               <p className="text-sm sm:tect-base mt-6">Select Colors</p>

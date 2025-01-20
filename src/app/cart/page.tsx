@@ -24,7 +24,7 @@ const Cart = () => {
         </div>
         <h1 className="text-3xl md:text-5xl font-[900] mb-5">YOUR CART</h1>
 
-        <div className="md:grid md:grid-cols-5 gap-5">
+        <div className="lg:grid lg:grid-cols-5 gap-5">
           <div className="border border-gray-300 p-4 rounded-xl col-span-3">
             <div className="flex gap-2">
               <div className=" bg-gray-200 rounded-md flex">

@@ -39,10 +39,10 @@ export async function NewArrivals() {
           </h1>
           <div>
           
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {data.map((val:any, i:number)=>(
               <div key={i} className=" bg-gray-100 rounded-lg">
-                <div className="rounded-lg w-full object-cove border-2 border-gray-200">
+                <div className="rounded-lg w-full border-2 border-gray-200">
                   <Image
                     src={urlFor(val.image).url()}
                     alt="tshirt"
@@ -52,10 +52,11 @@ export async function NewArrivals() {
                   />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-lg font-semibold sm:text-xl">
+                  <Link href={`/product/${val._id}`}><p className="text-lg font-semibold sm:text-xl">
                    {val.name}
-                  </p>
+                  </p></Link>
                   <div className="space-y-1">
+                    <p>{val._id}</p>
                    
                     <p className="font-bold text-xl"><span className="text-lg font-normal">Price:</span> ${val.price}</p>
                   </div>
