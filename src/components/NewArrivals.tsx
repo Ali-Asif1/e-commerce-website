@@ -1,4 +1,3 @@
-import React from "react";
 import Image from "next/image";
 import tshirt from "../../public/images/tshirt.png";
 import shirt from "../../public/images/shirt.png";
@@ -7,40 +6,63 @@ import tshirt2 from "../../public/images/tshirt2.png";
 import stars3 from "../../public/images/stars.svg";
 import stars4 from "../../public/images/jeansstar.svg";
 import Link from "next/link";
-import { AddToCartButton } from "./AddToCartButton";
+import { client } from "@/sanity/lib/client";
+import { urlFor } from "@/sanity/lib/image";
 
 
-export const NewArrivals = () => {
+
+async function getData(){
+  const query = (`*[_type == "products" && isNew == true]{
+    _id,
+    name,
+    isNew,
+    price,
+    image,
+  }[0..3]`);
+
+  const data = await client.fetch(query);
+
+  return data;
+}
+
+
+
+export async function NewArrivals() {
+  const data =await getData()
   return (
     <>
       <section className="new-arrivals">
+        
         <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
           <h1 className="text-center mb-10 font-[900] text-[32px] sm:text-5xl ">
             NEW ARRIVALS
           </h1>
           <div>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              <div>
-                <div className=" bg-gray-200 rounded-lg flex mb-4">
+          
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 ">
+              {data.map((val:any, i:number)=>(
+              <div key={i} className=" bg-gray-100 rounded-lg">
+                <div className="rounded-lg w-full object-cove border-2 border-gray-200">
                   <Image
-                    src={tshirt}
+                    src={urlFor(val.image).url()}
                     alt="tshirt"
-                    className="object cover flex-1"
+                    className="w-full h-64 object-cover"
+                    width={500}
+                    height={500}
                   />
                 </div>
                 <div className="space-y-1">
-                  <p className="text-base font-bold sm:text-xl">
-                    T-shirt with Tape Details
+                  <p className="text-lg font-semibold sm:text-xl">
+                   {val.name}
                   </p>
                   <div className="space-y-1">
-                    <Image src={stars4} alt="stars" />
-                    <p className="font-bold text-xl sm:text-2xl">$120</p>
+                   
+                    <p className="font-bold text-xl"><span className="text-lg font-normal">Price:</span> ${val.price}</p>
                   </div>
                 </div>
-               <AddToCartButton />
-              </div>
+              </div>))}
 
-              <div>
+              {/* <div>
                 <div className=" bg-gray-200 rounded-lg flex mb-4">
                   <Image
                     src={jeans}
@@ -61,9 +83,9 @@ export const NewArrivals = () => {
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="hidden sm:block">
+              {/* <div className="hidden sm:block">
                 <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
                   <Image src={shirt} alt="shirt" className="object-cover flex-1" />
                 </div>
@@ -76,9 +98,9 @@ export const NewArrivals = () => {
                     <p className="font-bold text-xl sm:text-2xl">$180</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
-              <div className="hidden sm:block">
+              {/* <div className="hidden sm:block">
                 <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
                   <Image
                     src={tshirt2}
@@ -95,7 +117,7 @@ export const NewArrivals = () => {
                     <p className="font-bold text-xl sm:text-2xl">$130</p>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
             </div>
           </div>
