@@ -39,7 +39,7 @@ export async function NewArrivals() {
           </h1>
           <div>
           
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
               {data.map((val:any, i:number)=>(
               <div key={i} className=" bg-gray-100 rounded-lg">
                 <div className="rounded-lg w-full border-2 border-gray-200">
@@ -62,63 +62,6 @@ export async function NewArrivals() {
                   </div>
                 </div>
               </div>))}
-
-              {/* <div>
-                <div className=" bg-gray-200 rounded-lg flex mb-4">
-                  <Image
-                    src={jeans}
-                    alt="jeans"
-                    className="flex-1 object-cover"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-base font-bold sm:text-xl">
-                    Skinny Fit Jeans
-                  </p>
-                  <div className="space-y-1">
-                    <Image src={stars3} alt="stars" />
-                    <div className="flex gap-2">
-                      <p className="font-bold text-xl sm:text-2xl">$240</p>
-                      <p className="font-bold text-xl sm:text-2xl line-through opacity-40">$260</p>
-                      <p className="text-red-400 text-[10px] py-1 px-2 sm:text-sm ml-2 text-cente rounded-3xl">-20%</p>
-                    </div>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
-                  <Image src={shirt} alt="shirt" className="object-cover flex-1" />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-base font-bold sm:text-xl">
-                    Checkered Shirt
-                  </p>
-                  <div className="space-y-1">
-                    <Image src={stars4} alt="stars" />
-                    <p className="font-bold text-xl sm:text-2xl">$180</p>
-                  </div>
-                </div>
-              </div> */}
-
-              {/* <div className="hidden sm:block">
-                <div className=" bg-gray-200 rounded-lg flex justify-center mb-4">
-                  <Image
-                    src={tshirt2}
-                    alt="tshirt"
-                    className="object-cover flex-1"
-                  />
-                </div>
-                <div className="space-y-1">
-                  <p className="text-base font-bold sm:text-xl">
-                    T-shirt with Tape Detail
-                  </p>
-                  <div className="space-y-1">
-                    <Image src={stars4} alt="stars" />
-                    <p className="font-bold text-xl sm:text-2xl">$130</p>
-                  </div>
-                </div>
-              </div> */}
 
             </div>
           </div>

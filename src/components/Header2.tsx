@@ -29,15 +29,15 @@ export const Header2 = () => {
               {menuOpen ? (
                 <div className="absolute w-[92%] mt-4 max-h-full bg-gray-200 rounded-lg z-10 duration-200 flex flex-col gap-6 font-semibold p-5">
                   <div className="space-y-2">
-                    <Link href={""}>Shop</Link>
+                    <Link href={"/"}>Home</Link>
                     <hr className="border border-gray-300"/>
                   </div >
                   <div className="space-y-2">
-                    <Link href={""}>On Sale</Link>
+                    <Link href={"/product"}>Product</Link>
                     <hr className="border border-gray-300"/>
                   </div>
                   <div className="space-y-2">
-                    <Link href={""}>New Arrivals</Link>
+                    <Link href={"/NewArrivals"}>New Arrivals</Link>
                     <hr className="border border-gray-300"/>
                   </div>
                   <div>
@@ -50,18 +50,21 @@ export const Header2 = () => {
           </div>
 
           <div className="hidden md:flex gap-4">
+            <div>
+              <Link href={'/'}>Home</Link>
+            </div>
             <div className="flex relative">
-              <Link href="">Shop</Link>
+              <Link href="/">Categories</Link>
               <Image src={downarrow} priority alt="logo" onClick={() => setShopMenu(!shopMenu)} className="cursor-pointer"/>
-                {shopMenu ? <div className="absolute w-24 h-9 top-[22px] left-10 bg-gray-200 rounded-lg z-10 duration-300 px-2 py-1">
-                  <h1 className=" text-gray-700">Men</h1>
+                {shopMenu ? <div className="absolute w-28 top-6 left-[90px] text-sm shadow-2xl bg-white border border-gray-300 rounded-lg z-10 duration-300 px-2 py-2 space-y-2">
+                  <Link href={''}><h1 className=" text-gray-700">Shirt</h1></Link>
+                  <Link href={''}><h1 className=" text-gray-700">T-Shirt</h1></Link>
+                  <Link href={''}><h1 className=" text-gray-700">Jeans</h1></Link>
+                  <Link href={''}><h1 className=" text-gray-700">Hoddie</h1></Link>
                 </div>:null }
             </div>
             <div>
-              <p>On Sale</p>
-            </div>
-            <div>
-              <p>New Arrivals</p>
+              <Link href={'/product'}>Products</Link>
             </div>
             <div>
               <p>Brands</p>

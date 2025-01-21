@@ -1,20 +1,16 @@
-'use client'
+
 
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
-import { useDispatch } from 'react-redux';
-import { addItem } from '../../../redux/CartSlice';
+
+
 
 const SingleProduct = async ({ params }: { params: { product: string } }) => {
-  const dispatch = useDispatch();
-  const product = {
   
-    name: 'data.name',
-    price: 100,
-  };
+ 
   try {
-    // Update query to fetch by name instead of ID
+    
     const fetchdata = `*[_type == "products" && _id == "${params.product}"]{
       _id,
       name,
@@ -26,15 +22,14 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
       sizes
     }`;
 
-    // Fetch data
+    
     const [data] = await client.fetch(fetchdata);
 
-    // Handle case where no data is found
+    
     if (!data) {
       return <div className="text-center">Product not found.</div>;
     }
 
-    // Render product
     return (
       <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 mt-4 md:mt-10">
           <div className="w-full rounded-xl border border-gray-200">
@@ -61,40 +56,37 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
                   </p>
                 </div>
               </div>
-              <p className="mt-5 text-sm sm:text-base">
+              <p className="mt-5 text-sm sm:text-base opacity-70">
                 {data.description}
               </p>
             </div>
             <hr className="border-gray-200 border-b my-6" />
 
-            <div className="right-one pb-4">
-              <div className=''><p className="">{data.colors}</p></div>
-              <div className="flex gap-4 mt-4">
-                <button className="w-10 sm:w-[37] sm:h-[37] rounded-full bg-red-950 px-[14px] py-[7px]">
-                </button>
-                <button className="w-10 sm:w-[37] sm:h-[37] rounded-full bg-black px-[14px] py-[7px]">
-                  .
-                </button>
-                <button className="w-10 sm:w-[37] sm:h-[37] rounded-full bg-blue-900 px-[14px] py-[7px]">
+            <div className="pb-4">
+              <div className='mb-4'><p className="">Select Color</p></div>
+              <div className="space-x-4">
+                <button className="w-10 h-10 rounded-full bg-red-600"></button>
+                <button className="w-10 h-10 rounded-full bg-black"></button>
+                <button className="w-10 h-10 rounded-full bg-blue-600">
                 </button>
               </div>
             </div>
             <hr className="border-gray-200 border-b mt-6" />
 
-            <div className="right-one pb-4">
+            <div className="pb-4">
               <p className="text-base mt-6">Choose Size</p>
-              <div className="flex justify-around mt-4">
-                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                  Small
+              <div className="space-x-4 mt-4">
+                <button className="w-20 h-10 rounded-full bg-gray-300 text-sm">
+                  S
                 </button>
-                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                  Medium
+                <button className="w-20 h-10 rounded-full bg-gray-300 text-sm">
+                  M
                 </button>
-                <button className="text-sm bg-gray-200 w-[76px] px-[14px] py-3 rounded-full">
-                  Large
+                <button className="w-20 h-10 rounded-full bg-gray-300 text-sm">
+                  L
                 </button>
-                <button className="text-sm bg-gray-200 w-[90px] px-[14px] py-3 rounded-full">
-                  X-Large
+                <button className="w-20 h-10 rounded-full bg-gray-300 text-sm">
+                  XL
                 </button>
               </div>
             </div>
@@ -106,7 +98,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
                 <p className="text-[10px]">1</p>
                 <span className="font-bold text-2xl">+</span>
               </button>
-              <button onClick={() => dispatch(addItem(data.name))} className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300">
+              <button className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300">
                 Add to Cart
               </button>
             </div>
