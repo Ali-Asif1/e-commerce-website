@@ -1,12 +1,21 @@
+'use client'
 
-
+import { useAppDispatch } from '@/app/redux/hooks';
 import { client } from '@/sanity/lib/client';
 import { urlFor } from '@/sanity/lib/image';
 import Image from 'next/image';
+import { addItem } from '@/app/redux/CartSlice'
 
 
 
 const SingleProduct = async ({ params }: { params: { product: string } }) => {
+  const dispatch = useAppDispatch();
+
+
+    const handleAddToCart = (data?: any) => {
+      dispatch(addItem(data))
+      
+    };
   
  
   try {
@@ -31,7 +40,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
     }
 
     return (
-      <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 mt-4 md:mt-10">
+      <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 my-4 md:my-10">
           <div className="w-full rounded-xl border border-gray-200">
             <Image
               src={urlFor(data.image).url()}
@@ -56,11 +65,11 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
                   </p>
                 </div>
               </div>
-              <p className="mt-5 text-sm sm:text-base opacity-70">
+              <p className="mt-5 text-sm sm:text-base opacity-70 line-clamp-3">
                 {data.description}
               </p>
             </div>
-            <hr className="border-gray-200 border-b my-6" />
+            <hr className="border-gray-200 border-b my-4" />
 
             <div className="pb-4">
               <div className='mb-4'><p className="">Select Color</p></div>
@@ -71,7 +80,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
                 </button>
               </div>
             </div>
-            <hr className="border-gray-200 border-b mt-6" />
+            <hr className="border-gray-200 border-b mt-4" />
 
             <div className="pb-4">
               <p className="text-base mt-6">Choose Size</p>
@@ -98,7 +107,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
                 <p className="text-[10px]">1</p>
                 <span className="font-bold text-2xl">+</span>
               </button>
-              <button className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300">
+              <button onClick={()=>handleAddToCart(data)} className="bg-black text-white basis-9/12 rounded-full px-4 py-3 border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300">
                 Add to Cart
               </button>
             </div>
@@ -112,6 +121,3 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
 };
 
 export default SingleProduct;
-
-
-

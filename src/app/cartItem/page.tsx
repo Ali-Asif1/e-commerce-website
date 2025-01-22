@@ -1,11 +1,15 @@
-'use client'
-import { useDispatch, useSelector } from 'react-redux';
+"use client";
+import { useDispatch, useSelector } from "react-redux";
 
-import { increaseQuantity, decreaseQuantity, removeItem } from '../../redux/CartSlice';
+import {
+  increaseQuantity,
+  decreaseQuantity,
+  removeItem,
+} from "../redux/CartSlice";
 
 const Cart = () => {
   const dispatch = useDispatch();
-  const cart = useSelector((state:any) => state.cart.items);
+  const cart = useSelector((state: any) => state.cart.items);
 
   return (
     <div className="container mx-auto p-4">
@@ -14,7 +18,7 @@ const Cart = () => {
         <p>Your cart is empty.</p>
       ) : (
         <ul className="space-y-4">
-          {cart.map((item:any) => (
+          {cart.map((item: any) => (
             <li
               key={item.id}
               className="flex justify-between items-center border p-4 rounded"

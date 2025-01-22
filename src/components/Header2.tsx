@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
@@ -9,10 +9,14 @@ import signup from "../../public/images/signup.svg";
 import downarrow from "../../public/images/downarrow.svg";
 import Link from "next/link";
 import { useState } from "react";
+import { useAppSelector } from "@/app/redux/hooks";
+
 
 export const Header2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopMenu, setShopMenu] = useState(false);
+
+ const items = useAppSelector(state => state.cart.items)
 
   return (
     <section className="second-header">
@@ -84,7 +88,7 @@ export const Header2 = () => {
           <div className="flex gap-4">
             <Image src={search}  priority alt="logo" className="block md:hidden" />
             <div className="relative"><Link href={'/cart'}><Image src={cart}  priority alt="logo" /></Link>
-            <span className="absolute bottom-[14px] left-5 text-sm">0</span>
+            <span className="absolute bottom-[14px] left-5 text-sm">c:{items.length}</span>
             </div>
             <Image src={signup}  priority alt="logo" />
           </div>
