@@ -30,11 +30,11 @@ async function allProducts() {
             </h1>
             <div>
             
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 rounded overflow-hidden shadow-2xl">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 rounded overflow-hidden shadow-2xl">
                 {data.map((val:any, i:number)=>(
-                <div key={i} className=" bg-gray-100 rounded-lg">
+                <div key={i} className=" bg-gray-100 rounded-lg border-2 border-gray-300 p-2 shadow-xl">
                     <Link href={`/product/${val._id}`}>
-                  <div className="rounded-lg w-full h-72 border-2 border-gray-200">
+                  <div className="rounded-lg w-full h-72 mb-3">
                     <Image
                       src={urlFor(val.image).url()}
                       alt="tshirt"
@@ -44,7 +44,7 @@ async function allProducts() {
                     />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-lg font-semibold sm:text-xl">
+                    <p className="font-semibold text-lg">
                      {val.name}
                     </p>
                     <div className="space-y-1">
