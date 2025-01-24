@@ -163,14 +163,14 @@ const SingleProduct = ({ params }: { params: { product: string } }) => {
 
   return (
     <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 my-4 md:my-10">
-      <div className="w-full rounded-xl border border-gray-200">
+      <div className="w-full rounded-xl border border-gray-200 overflow-hidden">
         <Image
           src={urlFor(data.image).url()}
           alt="shirt"
           width={500}
           height={500}
           priority
-          className="object-cover text-center"
+          className="object-cover text-center rounded-xl"
         />
       </div>
       <div>
