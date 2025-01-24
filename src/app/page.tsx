@@ -1,7 +1,9 @@
 import { DressStyle } from "@/components/DressStyle";
 
 import { Hero } from "@/components/Hero";
-import { NewArrivals } from "@/components/NewArrivals";
+import NewArrivals from "@/components/NewArrivals";
+
+
 import { Tags } from "@/components/Tags";
 import { Testomonial } from "@/components/Testomonial";
 import { TopSelling } from "@/components/TopSelling";

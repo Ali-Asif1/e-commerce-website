@@ -21,7 +21,7 @@ export const Header2 = () => {
   return (
     <section className="second-header">
       <div className="w-full max-w-[1440px] px-4 sm:px-8 md:px-12 lg:px-16 min-h-[64px] sm:min-h-[96px]">
-        <div className="flex min-h-[96px] items-center justify-between gap-4">
+        <div className="flex min-h-[96px] items-center justify-between gap-4 border-b-2 border-gray-200">
           <div className="flex gap-3">
             <div className="md:hidden cursor-pointer">
              <Image
@@ -88,7 +88,7 @@ export const Header2 = () => {
           <div className="flex gap-4">
             <Image src={search}  priority alt="logo" className="block md:hidden" />
             <div className="relative"><Link href={'/cart'}><Image src={cart}  priority alt="logo" /></Link>
-            <span className="absolute bottom-[14px] left-5 text-sm">c:{items.length}</span>
+            <span className="absolute bottom-[14px] left-5 text-sm">{items.length}</span>
             </div>
             <Image src={signup}  priority alt="logo" />
           </div>
