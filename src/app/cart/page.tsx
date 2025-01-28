@@ -1,8 +1,6 @@
 "use client";
 
 import deltet from "../../../public/images/delete.png";
-import code from "../../../public/images/promocode.png";
-
 import { urlFor } from "@/sanity/lib/image";
 import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
@@ -61,8 +59,8 @@ const Cart = () => {
                     key={item._id}
                     className="border border-gray-300 sm:px-4 rounded-xl mb-5"
                   >
-                    <div className="flex">
-                      <div className="rounded-lg">
+                    <div className="flex p-1 h-44 overflow-hidden">
+                      <div className="rounded-xl mr-2 overflow-hidden">
                         <Image
                           src={urlFor(item.image).url()}
                           alt="shirts"
@@ -72,7 +70,7 @@ const Cart = () => {
                           className="object-cover"
                         />
                       </div>
-                      <div className="w-full pt-6">
+                      <div className="w-full pt-4">
                         <div className="flex items-center justify-between">
                           <p className="sm:text-lg font-semibold">
                             {item.name}
@@ -149,7 +147,7 @@ const Cart = () => {
                       <p className="text-xl font-bold">${total.toFixed(2)}</p>
                     </div>
                   </div>
-                  <button className="bg-black text-white w-full h-12 rounded-full mt-4 active:scale-90">
+                  <button className="bg-black text-white w-full h-12 rounded-full mt-4 active:scale-90 duration-300">
                     Go To Checkout
                   </button>
                 </div>
@@ -163,3 +161,5 @@ const Cart = () => {
 };
 
 export default Cart;
+
+

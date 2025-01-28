@@ -1,73 +1,3 @@
-// import Image from "next/image";
-// import Link from "next/link";
-// import { client } from "@/sanity/lib/client";
-// import { urlFor } from "@/sanity/lib/image";
-
-// async function getData(){
-//   const query = (`*[_type == "products" && isNew == true]{
-//     _id,
-//     name,
-//     isNew,
-//     price,
-//     image,
-//   }[0..3]`);
-
-//   const data = await client.fetch(query);
-
-//   return data;
-// };
-
-//  async function NewArrivals() {
-//  const data = await getData()
-//   return (
-//     <>
-//       <section className="new-arrivals">
-
-//         <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
-//           <h1 className="text-center mb-10 font-[900] text-[32px] sm:text-5xl ">
-//             NEW ARRIVALS
-//           </h1>
-//           <div>
-
-//             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-//               {data.map((val:any, i:number)=>(
-//               <div key={val._id} className=" bg-gray-100 rounded-lg">
-//                 <div className="rounded-lg w-full border-2 border-gray-200">
-//                   <Image
-//                     src={urlFor(val.image).url()}
-//                     alt="tshirt"
-//                     className="w-full h-64 object-cover"
-//                     width={500}
-//                     height={500}
-//                     priority
-//                   />
-//                 </div>
-//                 <div className="space-y-1">
-//                   <Link href={`/product/${val._id}`}><p className="text-lg font-semibold sm:text-xl">
-//                    {val.name}
-//                   </p></Link>
-//                   <div className="space-y-1">
-//                     <p>{val._id}</p>
-
-//                     <p className="font-bold text-xl"><span className="text-lg font-normal">Price:</span> ${val.price}</p>
-//                   </div>
-//                 </div>
-//               </div>))}
-
-//             </div>
-//           </div>
-//           <Link href={'/shop'}><div className="flex justify-center mt-8"><button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300 active:scale-95">
-//             Shop Now</button></div>
-//           <hr className="w-full border-gray-200 mt-[40px] sm:mt-16"/></Link>
-//         </div>
-//       </section>
-//     </>
-//   );
-// };
-
-// export default NewArrivals;
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -76,9 +6,20 @@ import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 
+interface Product {
+  _id: string;
+  name: string;
+  price: number;
+  discountPercent: number;
+  image: string;
+}
+
 const NewArrivals = () => {
-  const [data, setData] = useState<any[]>([]);
+  const [data, setData] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>(null);
+  const [currentPage, setCurrentPage] = useState(0);
+
+  const ITEMS_PER_PAGE = 4; // Number of products per page
 
   useEffect(() => {
     const fetchData = async () => {
@@ -86,10 +27,10 @@ const NewArrivals = () => {
         const query = `*[_type == "products" && isNew == true]{
           _id,
           name,
-          isNew,
+          discountPercent,
           price,
           image
-        }[0..3]`;
+        }`;
 
         const result = await client.fetch(query);
         setData(result);
@@ -110,51 +51,65 @@ const NewArrivals = () => {
     return <div className="text-center">Loading new arrivals...</div>;
   }
 
+  const startIndex = currentPage * ITEMS_PER_PAGE;
+  const endIndex = startIndex + ITEMS_PER_PAGE;
+  const currentProducts = data.slice(startIndex, endIndex);
+
+  const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+
   return (
-    <section className="new-arrivals">
+    <section className="all products">
       <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
-        <h1 className="text-center mb-10 font-[900] text-[32px] sm:text-5xl">
-          NEW ARRIVALS
+        <h1 className="text-center mb-10 font-[800] text-[32px] sm:text-5xl uppercase">
+          New Arrivals
         </h1>
         <div>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-            {data.map((val: any) => (
-              <div key={val._id} className="bg-gray-100 rounded-lg">
-                <div className="rounded-lg w-full border-2 border-gray-200">
-                  <Image
-                    src={urlFor(val.image).url()}
-                    alt={val.name}
-                    className="w-full h-64 object-cover"
-                    width={500}
-                    height={500}
-                    priority
-                  />
-                </div>
-                <div className="space-y-1">
-                  <Link href={`/product/${val._id}`}>
-                    <p className="text-lg font-semibold sm:text-xl">
-                      {val.name}
-                    </p>
-                  </Link>
-                  <div className="space-y-1">
-                    <p>{val._id}</p>
-                    <p className="font-bold text-xl">
-                      <span className="text-lg font-normal">Price:</span> $
-                      {val.price}
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 rounded overflow-hidden">
+            {currentProducts.map((val: Product, i: number) => (
+              <div
+                key={i}
+                className=" bg-gray-100 rounded-lg border-2 border-gray-300 p-2 shadow-xl"
+              >
+                <Link href={`/product/${val._id}`}>
+                  <div className="rounded-lg w-full h-72 mb-3">
+                    <Image
+                      src={urlFor(val.image).url()}
+                      alt="product-image"
+                      className="w-full h-full object-cover object rounded-lg hover:scale-105 duration-300"
+                      width={500}
+                      height={500}
+                    />
+                  </div>
+                  <div className="w-full min-h-16">
+                    <p className="text-center font-semibold text-lg">{val.name}</p>
+                  </div>
+                  <div className="flex items-center justify-between mt-3">
+                    <p className="font-bold text-lg">$ {val.price}</p>
+                    <p className="w-12 h-6 text-sm sm:text-base text-white text-center bg-gray-400 border rounded">
+                      -{val.discountPercent}%
                     </p>
                   </div>
-                </div>
+                </Link>
               </div>
             ))}
           </div>
         </div>
-        <Link href="/shop">
-          <div className="flex justify-center mt-8">
-            <button className="w-full sm:w-[230px] sm:object-center text-center py-3 px-12 text-lg bg-white text-black border-2 border-gray-300 rounded-full hover:bg-black hover:text-white cursor-pointer hover:border-black transition ease-linear duration-300 active:scale-95">
-              Shop Now
-            </button>
-          </div>
-        </Link>
+        {/* Dot Pagination */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <button
+              key={index}
+              className={`w-3 h-3 rounded-full ${
+                currentPage === index
+                  ? "bg-black"
+                  : "bg-gray-300 hover:bg-gray-500"
+              }`}
+              onClick={() => setCurrentPage(index)}
+              aria-label={`Go to page ${index + 1}`}
+            ></button>
+          ))}
+        </div>
+
         <hr className="w-full border-gray-200 mt-[40px] sm:mt-16" />
       </div>
     </section>
@@ -162,4 +117,3 @@ const NewArrivals = () => {
 };
 
 export default NewArrivals;
-

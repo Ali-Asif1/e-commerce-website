@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import Image from "next/image";
 import logo from "../../public/images/logo.png";
@@ -10,13 +10,14 @@ import downarrow from "../../public/images/downarrow.svg";
 import Link from "next/link";
 import { useState } from "react";
 import { useAppSelector } from "@/app/redux/hooks";
+import { Category } from "./category";
 
 
 export const Header2 = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [shopMenu, setShopMenu] = useState(false);
 
- const items = useAppSelector(state => state.cart.items)
+  const items = useAppSelector((state) => state.cart.items);
 
   return (
     <section className="second-header">
@@ -24,25 +25,26 @@ export const Header2 = () => {
         <div className="flex min-h-[96px] items-center justify-between gap-4 border-b-2 border-gray-200">
           <div className="flex gap-3">
             <div className="md:hidden cursor-pointer">
-             <Image
+              <Image
                 src={menubar}
                 alt="logo"
-                onClick={() => setMenuOpen(!menuOpen)} className="relative"
+                onClick={() => setMenuOpen(!menuOpen)}
+                className="relative"
                 priority
               />
               {menuOpen ? (
                 <div className="absolute w-[92%] mt-4 max-h-full bg-gray-200 rounded-lg z-10 duration-200 flex flex-col gap-6 font-semibold p-5">
                   <div className="space-y-2">
                     <Link href={"/"}>Home</Link>
-                    <hr className="border border-gray-300"/>
-                  </div >
-                  <div className="space-y-2">
-                    <Link href={"/product"}>Product</Link>
-                    <hr className="border border-gray-300"/>
+                    <hr className="border border-gray-300" />
                   </div>
                   <div className="space-y-2">
-                    <Link href={"/NewArrivals"}>New Arrivals</Link>
-                    <hr className="border border-gray-300"/>
+                    <Link href={"/product"}>Products</Link>
+                    <hr className="border border-gray-300" />
+                  </div>
+                  <div className="space-y-2">
+                    <Link href={"/"}>Category</Link>
+                    <hr className="border border-gray-300" />
                   </div>
                   <div>
                     <Link href={""}>Brands</Link>
@@ -50,31 +52,60 @@ export const Header2 = () => {
                 </div>
               ) : null}
             </div>
-            <Link href={'/'}><Image src={logo} alt="logo" priority /></Link>
+            <Link href={"/"}>
+              <Image src={logo} alt="logo" priority />
+            </Link>
           </div>
 
           <div className="hidden md:flex gap-4">
             <div>
-              <Link href={'/'}>Home</Link>
+              <Link href={"/"}>Home</Link>
             </div>
-            <div className="flex relative">
-              <Link href="/">Categories</Link>
-              <Image src={downarrow} priority alt="logo" onClick={() => setShopMenu(!shopMenu)} className="cursor-pointer"/>
-                {shopMenu ? <div className="absolute w-28 top-6 left-[90px] text-sm shadow-2xl bg-white border border-gray-300 rounded-lg z-10 duration-300 px-2 py-2 space-y-2">
-                  <Link href={''}><h1 className=" text-gray-700">Shirt</h1></Link>
-                  <Link href={''}><h1 className=" text-gray-700">T-Shirt</h1></Link>
-                  <Link href={''}><h1 className=" text-gray-700">Jeans</h1></Link>
+            <div>
+              <Link href={"/product"}>Products</Link>
+            </div>
+            <div className="relative">
+              <Link href="/" onClick={() => setShopMenu(!shopMenu)} className="cursor-pointer">Category</Link>
+                {shopMenu ? <div className="absolute w-20 top-7 text-sm shadow-2xl bg-white border-2 border-gray-300 rounded-md z-10 duration-300 p-2">
+                  <Link href={'/category'}><h1 className=" text-gray-700 mb-1">Shirt</h1></Link>
+                  <Link href={''}><h1 className=" text-gray-700 mb-1">T-Shirt</h1></Link>
+                  <Link href={''}><h1 className=" text-gray-700 mb-1">Jeans</h1></Link>
                   <Link href={''}><h1 className=" text-gray-700">Hoddie</h1></Link>
                 </div>:null }
             </div>
-            <div>
-              <Link href={'/product'}>Products</Link>
-            </div>
+            {/* <div className="flex relative">
+              <Link href="/">Category</Link>
+              <Image
+                src={downarrow}
+                priority
+                alt="logo"
+                onClick={() => setShopMenu(!shopMenu)}
+                className="cursor-pointer"
+              />
+              {shopMenu ? (
+                <div className="absolute w-28 top-6 left-[90px] text-sm shadow-2xl bg-white border border-gray-300 rounded-lg z-10 duration-300 px-2 py-2 space-y-2">
+                  <Link href={'category'}>
+                    <h1 className="text-gray-700">Shirt</h1>
+                  </Link>
+                  <Link href="/category/t-shirt">
+                    <h1 className="text-gray-700">T-Shirt</h1>
+                  </Link>
+                  <Link href="/category/jeans">
+                    <h1 className="text-gray-700">Jeans</h1>
+                  </Link>
+                  <Link href="/category/hoodie">
+                    <h1 className="text-gray-700">Hoodie</h1>
+                  </Link>
+                </div>
+              ) : null}
+            </div> */}
+          
+           
             <div>
               <p>Brands</p>
             </div>
           </div>
-          <div className="flex-1 hidden lg:block  rounded-ful max-w-[577px] bg-gray-200 rounded-full">
+          <div className="flex-1 hidden md:block  rounded-ful max-w-[577px] bg-gray-200 rounded-full">
             <div className="flex items-center opacity-3 h-10 gap-3 pl-[18px]">
               <Image src={search} priority alt="logo" className="opacity-35" />
               <input
@@ -86,11 +117,21 @@ export const Header2 = () => {
           </div>
 
           <div className="flex gap-4">
-            <Image src={search}  priority alt="logo" className="block md:hidden" />
-            <div className="relative"><Link href={'/cart'}><Image src={cart}  priority alt="logo" /></Link>
-            <span className="absolute bottom-[14px] left-5 text-sm">{items.length}</span>
+            <Image
+              src={search}
+              priority
+              alt="logo"
+              className="block md:hidden"
+            />
+            <div className="relative">
+              <Link href={"/cart"}>
+                <Image src={cart} priority alt="logo" />
+              </Link>
+              <div className="bg-slate-500 w-4 absolute bottom-[14px] left-4 rounded-full text-center text-white text-xs">
+                {items.length}
+              </div>
             </div>
-            <Image src={signup}  priority alt="logo" />
+            <Image src={signup} priority alt="logo" />
           </div>
         </div>
       </div>
