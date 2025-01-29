@@ -22,6 +22,6 @@
       
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/redux/Store.ts", "src/app/redux/CartSlice.tsx", "src/app/category"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/redux/Store.ts", "src/app/redux/CartSlice.tsx", "src/app/category", "src/app/addToCartButton"],
   "exclude": ["node_modules"]
 }

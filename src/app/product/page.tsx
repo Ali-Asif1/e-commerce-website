@@ -43,7 +43,7 @@ async function allProducts() {
                   className=" bg-gray-100 rounded-lg border-2 border-gray-300 p-2 shadow-xl"
                 >
                   <Link href={`/product/${val._id}`}>
-                    <div className="rounded-lg w-full h-72 mb-3">
+                    <div className="rounded-lg w-full h-72 mb-3 drop-shadow">
                       <Image
                         src={urlFor(val.image).url()}
                         alt="product-image"
@@ -54,13 +54,13 @@ async function allProducts() {
                     </div>
 
                     <div className="w-full min-h-16">
-                      <p className="text-center font-semibold text-lg">
+                      <p className="font-semibold text-lg">
                         {val.name}
                       </p>
                     </div>
                     <div className="flex items-center justify-between mt-3">
-                      <p className="font-bold text-lg">$ {val.price}</p>
-                      <p className="w-12 h-6 text-sm sm:text-base text-white text-center bg-gray-400 border rounded">
+                      <p className="text-gray-700">${val.price}</p>
+                      <p className="w-12 h-6 text-sm text-white text-center bg-gray-400 border rounded">
                         -{val.discountPercent}%
                       </p>
                     </div>
