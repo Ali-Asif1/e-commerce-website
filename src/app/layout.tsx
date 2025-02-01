@@ -6,6 +6,7 @@ import { Header2 } from "@/components/Header2";
 import { Update } from "@/components/Update";
 import { Footer } from "@/components/Footer";
 import { Providers } from "./provider";
+import ClerkProviderWrapper from "./ClerkProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <ClerkProviderWrapper>
     <html lang="en">
       <body className={inter.className}>
+      
         <Providers>
           <Header1 />
           <Header2 />
@@ -29,7 +32,10 @@ export default function RootLayout({
           <Update />
           <Footer />
         </Providers>
+       
       </body>
     </html>
+    </ClerkProviderWrapper>
+    
   );
 }

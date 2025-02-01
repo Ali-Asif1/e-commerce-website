@@ -36,7 +36,7 @@ export default async function Category({
 
   return (
     <div className="px-4 py-12 sm:px-8 lg:px-16">
-      <h1 className="text-2xl sm:text-3xl text-center font-bold uppercase mb-6">
+      <h1 className="text-2xl sm:text-4xl text-center font-bold uppercase mb-6">
         {params.slug} Collection
       </h1>
       <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-6 rounded overflow-hidden">

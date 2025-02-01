@@ -180,7 +180,7 @@ export const Header2 = () => {
                 priority
               />
               {menuOpen && (
-                <div className="absolute w-[90%] h-fit mt-2 bg-gray-100 border border-gray-300 drop-shadow max-h-full rounded-lg z-10 duration-200 flex flex-col gap-2 font-semibold px-6 py-2">
+                <div className="absolute w-[90%] h-60 mt-2 bg-gray-100 border border-gray-300 drop-shadow max-h-full rounded-lg z-10 duration-200 flex flex-col gap-2 font-semibold px-6 py-2">
                   <Link href="/" className="text-gray-900">
                     Home
                   </Link>
@@ -197,7 +197,7 @@ export const Header2 = () => {
                       Category
                     </button>
                     {shopMenu && (
-                      <div className="absolute w-24 top-7 -left-1 text-sm shadow-2xl bg-white border-2 border-gray-300 rounded-md z-10 duration-300 p-2">
+                      <div className="absolute w-24 top-6 left-14 text-sm shadow-xl bg-white border-2 border-gray-300 rounded-md z-10 duration-300 px-2 pt-1">
                         {categories.length > 0 ? (
                           categories.map((category) => (
                             <Link
