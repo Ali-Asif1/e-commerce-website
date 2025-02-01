@@ -13,7 +13,7 @@ const AddToCartButton = ({ product }: { product: any }) => {
   return (
     <button
       onClick={handleAddToCart}
-      className="bg-black text-white w-[80%] h-12 rounded-md border-2 border-black hover:text-black hover:bg-gray-100 active:scale-90 duration-300 cursor-pointer"
+      className="bg-black text-white w-[80%] h-12 rounded-md  active:scale-95 duration-300 cursor-pointer "
     >
       Add to Cart
     </button>
@@ -21,3 +21,4 @@ const AddToCartButton = ({ product }: { product: any }) => {
 };
 
 export default AddToCartButton;
+    

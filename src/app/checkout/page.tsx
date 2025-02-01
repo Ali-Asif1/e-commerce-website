@@ -1,20 +1,20 @@
 "use client";
+export const dynamic = "force-dynamic";
 
 import { useRouter, useSearchParams } from "next/navigation";
 import { useAppSelector } from "../redux/hooks";
 import Image from "next/image";
 import { urlFor } from "@/sanity/lib/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Checkout = () => {
   const searchParams = useSearchParams();
+const [total, setTotal] = useState(0);
 
-  let totalStr = searchParams.get("total");
-
-  if (totalStr === null) {
-    totalStr = "0";
-  }
-  let total = parseFloat(totalStr);
+useEffect(() => {
+  const totalStr = searchParams.get("total") || "0";
+  setTotal(parseFloat(totalStr));
+}, [searchParams]);
 
   const cartItems = useAppSelector((state) => state.cart.items);
   const [form, setForm] = useState({

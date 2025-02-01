@@ -231,7 +231,7 @@ const Cart = () => {
                     className=" border-b py-4"
                   >
                     <div className="flex gap-1 w-full justify-between">
-                      <div>
+                      <div className="border border-gray-300 rounded-md overflow-hidden">
                         <Image
                           src={urlFor(item.image).url()}
                           alt={item.name}

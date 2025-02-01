@@ -193,6 +193,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
 
   return (
     <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 my-4 md:my-10">
+
       {/* Product Image */}
       <div className="w-fit h-[550px] rounded-lg border-2 border-gray-300 overflow-hidden">
         <Image
@@ -243,7 +244,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
             {product.sizes.map((size) => (
               <span
                 key={size}
-                className="px-3 py-2 border rounded text-sm bg-white text-black border-gray-300 hover:bg-black focus:bg-black focus:text-white hover:text-white active:scale-90 duration-300  cursor-pointer"
+                className="w-9 h-9 border rounded-md text-sm text-center content-center bg-gray-950 text-white active:scale-90 duration-300  cursor-pointer"
               >
                 {size}
               </span>
