@@ -4,10 +4,6 @@ import NewArrivals from "@/components/NewArrivals";
 import { Tags } from "@/components/Tags";
 import { Testomonial } from "@/components/Testomonial";
 
-
-
-
-
 export default function Home() {
   return (
     <div className="w-full max-w-[1440px]">
@@ -16,7 +12,6 @@ export default function Home() {
       <NewArrivals />
       <DressStyle />
       <Testomonial />
-     
     </div>
   );
 }
