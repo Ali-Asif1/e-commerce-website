@@ -162,6 +162,7 @@ import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
 import StarRating from "@/components/starRating";
 import AddToCartButton from "@/app/addToCartButton/addToCartButton";
+import { notFound } from "next/navigation";
 
 interface Product {
   _id: string;
@@ -174,7 +175,7 @@ interface Product {
   sizes: string[];
 }
 
-const fetchProduct = async (productId: string): Promise<Product | null> => {
+const fetchProduct = async (productId: string) => {
   try {
     const query = `*[_type == "products" && _id == "${productId}"][0]`;
     return await client.fetch(query);
@@ -185,11 +186,14 @@ const fetchProduct = async (productId: string): Promise<Product | null> => {
 };
 
 const SingleProduct = async ({ params }: { params: { product: string } }) => {
-  const product = await fetchProduct(params.product);
+  const product:Product = await fetchProduct(params.product);
 
+  // if (!product) {
+  //   return <div className="text-center text-red-500">Product not found.</div>;
+  // }
   if (!product) {
-    return <div className="text-center text-red-500">Product not found.</div>;
-  }
+      return notFound();
+    }
 
   return (
     <div className="md:grid grid-cols-2 gap-6 px-4 sm:px-8 md:px-12 lg:px-16 my-4 md:my-10">
@@ -244,7 +248,7 @@ const SingleProduct = async ({ params }: { params: { product: string } }) => {
             {product.sizes.map((size) => (
               <span
                 key={size}
-                className="w-9 h-9 border rounded-md text-sm text-center content-center bg-gray-950 text-white active:scale-90 duration-300  cursor-pointer"
+                className="w-9 h-9 border active:bg-white active:text-black rounded-md text-sm text-center content-center bg-gray-950 text-white active:scale-90 duration-300  cursor-pointer"
               >
                 {size}
               </span>

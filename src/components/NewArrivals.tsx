@@ -147,8 +147,9 @@ const NewArrivals = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "products" && isNew == true]{
+        const query = `*[_type == "products" && isNew]{
           _id,
+          isNew,
           name,
           discountPercent,
           price,
@@ -220,22 +221,6 @@ const NewArrivals = () => {
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Dot Pagination */}
-        <div className="flex justify-center mt-6 space-x-2">
-          {Array.from({ length: totalPages }).map((_, index) => (
-            <button
-              key={index}
-              className={`w-3 h-3 rounded-full ${
-                currentPage === index
-                  ? "bg-black"
-                  : "bg-gray-300 hover:bg-gray-500"
-              }`}
-              onClick={() => setCurrentPage(index)}
-              aria-label={`Go to page ${index + 1}`}
-            ></button>
-          ))}
         </div>
 
         {/* Pagination Component */}

@@ -43,16 +43,16 @@ export default async function Category({
         </h1>
         <div>
           <div className="grid justify-between px-4 lg:px-0 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3 rounded overflow-hidden">
-            {products.map((val: ProductType) => (
+            {products.map((product: ProductType) => (
               <div
-                key={val._id}
+                key={product._id}
                 className=" bg-gray-100 rounded-lg border-2 border-gray-400 p-2 overflow-hidden shadow-xl "
               >
-                <Link href={`/product/${val._id}`}>
+                <Link href={`/product/${product._id}`}>
                   <div className="rounded-lg w-full mb-5 drop-shadow-md">
                     <Image
-                      src={urlFor(val.image).url()}
-                      alt={val.name}
+                      src={urlFor(product.image).url()}
+                      alt={product.name}
                       className="aspect-square object-cover rounded-lg hover:scale-105 duration-300"
                       width={500}
                       height={500}
@@ -60,12 +60,12 @@ export default async function Category({
                     />
                   </div>
                   <div className="w-full min-h-16">
-                    <p className="font-semibold text-lg">{val.name}</p>
+                    <p className="font-semibold text-lg">{product.name}</p>
                   </div>
                   <div className="flex items-center justify-between mt-3">
-                    <p className="text-gray-700 text-lg">${val.price}</p>
+                    <p className="text-gray-700 text-lg">${product.price}</p>
                     <p className="w-12 h-6 text-sm content-center text-red-500 text-center bg-gray-400 border rounded line-through">
-                      {val.discountPercent}%
+                      {product.discountPercent}%
                     </p>
                   </div>
                 </Link>
