@@ -13,7 +13,7 @@ const AddToCartButton = ({ product }: { product: any }) => {
   return (
     <button
       onClick={handleAddToCart}
-      className="bg-black text-white w-[80%] h-12 rounded-md  active:scale-95 duration-300 cursor-pointer "
+      className="bg-black text-white w-[80%] h-12 rounded-md active:scale-95 duration-300 cursor-pointer "
     >
       Add to Cart
     </button>

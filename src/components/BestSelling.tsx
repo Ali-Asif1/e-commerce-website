@@ -1,13 +1,11 @@
-
-
 "use client";
-
+export const dynamic = "force-dynamic";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import Pagination from "@/components/Pagination"; 
+import Pagination from "@/components/Pagination";
 
 interface Product {
   _id: string;
@@ -19,7 +17,7 @@ interface Product {
 
 const ITEMS_PER_PAGE = 4; 
 
-const NewArrivals = () => {
+ const BestSelling = () => {
   const [data, setData] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -28,7 +26,7 @@ const NewArrivals = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "products" && isNew]{
+        const query = `*[_type == "products" && isNew == false]{
           _id,
           isNew,
           name,
@@ -53,11 +51,12 @@ const NewArrivals = () => {
     fetchData();
   }, []);
 
- 
+
   if (error) {
     return <div className="text-center text-red-500">{error}</div>;
   }
 
+  
   if (loading) {
     return <div className="text-center">Loading new arrivals...</div>;
   }
@@ -71,7 +70,7 @@ const NewArrivals = () => {
     <section className="all products">
       <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
         <h1 className="text-2xl sm:text-4xl text-center font-bold uppercase mb-6">
-          New Arrivals
+          Best Selling
         </h1>
         <div>
           <div className="grid justify-between px-4 lg:px-0 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3 rounded overflow-hidden">
@@ -90,7 +89,7 @@ const NewArrivals = () => {
                       height={500}
                       priority
                     />
-                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">New</span>
+                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">Hot</span>
                   </div>
                   <div className="w-full min-h-16">
                     <p className="font-semibold text-lg">{val.name}</p>
@@ -118,4 +117,4 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default BestSelling
