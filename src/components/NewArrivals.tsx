@@ -57,7 +57,7 @@ const NewArrivals = () => {
   }
 
   const startIndex = currentPage * ITEMS_PER_PAGE;
-  const currentProducts = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
+  const Products = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
 
   return (
@@ -68,7 +68,7 @@ const NewArrivals = () => {
         </h1>
         <div>
           <div className="grid justify-between px-4 lg:px-0 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3 rounded overflow-hidden">
-            {currentProducts.map((val: Product) => (
+            {Products.map((val: Product) => (
               <div
                 key={val._id}
                 className=" bg-gray-100 rounded-lg border-2 border-gray-400 p-2 overflow-hidden shadow-xl "

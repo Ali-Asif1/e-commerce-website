@@ -17,7 +17,7 @@ interface Product {
 
 const ITEMS_PER_PAGE = 4; 
 
-const NewArrivals = () => {
+const BestSelling = () => {
   const [data, setData] = useState<Product[]>([]);
   const [error, setError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
@@ -69,7 +69,7 @@ const NewArrivals = () => {
     <section className="all products">
       <div className="px-4 pt-12 sm:pt-16 sm:px-8 lg:px-16">
         <h1 className="text-2xl sm:text-4xl text-center font-bold uppercase mb-6">
-          New Arrivals
+          Best Selling
         </h1>
         <div>
           <div className="grid justify-between px-4 lg:px-0 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-3 rounded overflow-hidden">
@@ -116,5 +116,5 @@ const NewArrivals = () => {
   );
 };
 
-export default NewArrivals;
+export default BestSelling;
 
