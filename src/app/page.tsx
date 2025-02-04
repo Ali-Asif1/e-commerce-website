@@ -9,8 +9,9 @@ export default function Home() {
     <div className="w-full max-w-[1440px]">
       <Hero />
       <Tags />
-      <NewArrivals />
+     
       <Suspense fallback={<div>Loading Best Selling...</div>}>
+      <NewArrivals />
       <BestSelling />
     </Suspense>
      

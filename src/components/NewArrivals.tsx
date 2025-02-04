@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useState, useEffect } from "react";
@@ -7,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { client } from "@/sanity/lib/client";
 import { urlFor } from "@/sanity/lib/image";
-import Pagination from "@/components/Pagination"; 
+import Pagination from "@/components/Pagination";
 
 interface Product {
   _id: string;
@@ -17,7 +15,7 @@ interface Product {
   image: string;
 }
 
-const ITEMS_PER_PAGE = 4; 
+const ITEMS_PER_PAGE = 4;
 
 const NewArrivals = () => {
   const [data, setData] = useState<Product[]>([]);
@@ -45,15 +43,11 @@ const NewArrivals = () => {
       } finally {
         setLoading(false);
       }
-
-      
-      
     };
 
     fetchData();
   }, []);
 
- 
   if (error) {
     return <div className="text-center text-red-500">{error}</div>;
   }
@@ -62,7 +56,6 @@ const NewArrivals = () => {
     return <div className="text-center">Loading new arrivals...</div>;
   }
 
- 
   const startIndex = currentPage * ITEMS_PER_PAGE;
   const currentProducts = data.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   const totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
@@ -90,7 +83,9 @@ const NewArrivals = () => {
                       height={500}
                       priority
                     />
-                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">New</span>
+                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">
+                      New
+                    </span>
                   </div>
                   <div className="w-full min-h-16">
                     <p className="font-semibold text-lg">{val.name}</p>
