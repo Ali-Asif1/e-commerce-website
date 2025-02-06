@@ -57,7 +57,7 @@ const BestSelling = () => {
   }
 
   if (loading) {
-    return <div className="text-center">Loading new arrivals...</div>;
+    return <div className="text-center">Loading Best Selling...</div>;
   }
 
  
@@ -88,7 +88,7 @@ const BestSelling = () => {
                       height={500}
                       priority
                     />
-                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">New</span>
+                    <span className="absolute top-0 bg-red-500 text-white rounded px-2 py-1">Hot</span>
                   </div>
                   <div className="w-full min-h-16">
                     <p className="font-semibold text-lg">{val.name}</p>

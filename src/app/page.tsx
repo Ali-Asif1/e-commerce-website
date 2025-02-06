@@ -10,10 +10,10 @@ export default function Home() {
       <Hero />
       <Tags />
      
-      <Suspense fallback={<div>Loading Best Selling...</div>}>
+      <Suspense fallback={<div>Loading Products...</div>}>
       <NewArrivals />
       <BestSelling />
-    </Suspense>
+     </Suspense>
      
     </div>
   );

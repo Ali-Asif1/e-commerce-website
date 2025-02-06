@@ -27,17 +27,17 @@ interface CartItem {
   }
 
 
-// Define the CartState interface
+
 interface CartState {
   items: CartItem[];
 }
 
-// Initial state of the cart
+
 const initialState: CartState = {
   items: [],
 };
 
-// Create the cart slice
+
 const cartSlice = createSlice({
   name: 'cart',
   initialState,
